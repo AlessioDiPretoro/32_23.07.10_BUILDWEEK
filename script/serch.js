@@ -1,7 +1,9 @@
 let url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 const form = document.getElementById("search");
+console.log(form);
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+
   const contenitoreRicerca = document.getElementById("contenitoreRicerca");
   contenitoreRicerca.innerText = "";
   let input = document.querySelector("input").value;
@@ -18,27 +20,41 @@ form.addEventListener("submit", function (e) {
       //creo array vuoto da popolare con album
       let arrayAlbum = [];
       //ciclo array data, pesco gli album e lizeppo dentro l'array
-
+      console.log(data.data[0].artist.name.toLowerCase());
+      console.log(input.toLowerCase());
+      if (data.data[0].artist.name.toLowerCase() === input.toLowerCase()) {
+        const artistaConFoto = document.createElement("div");
+        console.log("m");
+        artistaConFoto.innerHTML = `
+        <div class="m-1 border rounded-circle " id= "artist">
+        <img src="${data.data[0].artist.picture_medium}" class="w-100" \>
+        </div>
+        <div> <h4> ${data.data[0].artist.name} </h4>
+        <p> ${data.data[0].artist.type}</p> </div>
+        `;
+        contenitoreRicerca.appendChild(artistaConFoto);
+        let artist = document.getElementById("artist");
+        artist.addEventListener("click", function () {
+          window.location.assign(`artist.html`);
+        });
+      }
+      // ora collegiamo foto artista a pagina artista
       data.data.forEach((dato) => {
         let titolo = dato.album.title;
         arrayAlbum.push(titolo);
         //creiamo i contenitori per gli album
-        const artistaConFoto = document.createElement("div");
-        artistaConFoto.innerHTML = `
-        <div>
+        const albumConFoto = document.createElement("div");
+        albumConFoto.innerHTML = `
+        <div class="m-1">
         <img src="${dato.album.cover_small}" \>
         </div>
+        <div> <h4> ${dato.album.title} </h4>
+        <p> ${dato.album.type}</p> </div>
         `;
 
-        contenitoreRicerca.appendChild(artistaConFoto);
+        contenitoreRicerca.appendChild(albumConFoto);
       });
       console.log(arrayAlbum);
-
-      //compilare in abe alla ricerca delle card:
-      //  let artistaTrovato = document.createElement('div')
-      // il primo risultato è un div con background image l'artista e le scritte bla bla
-      //e che fa da link alla pagina dell'artista con le canzoni
-      //  artistaTrovato.style= "backgroundImage: url('')"
     } catch (a) {
       console.log(a);
     }
