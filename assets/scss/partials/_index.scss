@@ -1,5 +1,7 @@
 body {
-  background: rgb(241, 179, 179);
+  background-color: $backgoundGreyBody;
+  color: $textWhite;
+  font-family: "CircularStd-Black";
 }
 #sideBar {
   background: #000;
