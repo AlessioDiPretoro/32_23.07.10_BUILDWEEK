@@ -3,6 +3,10 @@ body {
   color: $textWhite;
   font-family: "CircularStd-Black";
 }
+
+h2 {
+  font-size: 1.4em;
+}
 #sideBar {
   background: #000;
   min-width: 350px;
@@ -24,4 +28,11 @@ body {
 #hiddenMenu i {
   font-size: 30px;
   margin: 0.3em;
+}
+
+.card-body p {
+  font-size: 0.6em;
+}
+.card-body p:nth-last-of-type(1) {
+  color: $textSoftGray;
 }
