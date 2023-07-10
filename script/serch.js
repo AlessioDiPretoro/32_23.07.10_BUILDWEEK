@@ -35,7 +35,7 @@ form.addEventListener("submit", function (e) {
         contenitoreRicerca.appendChild(artistaConFoto);
         let artist = document.getElementById("artist");
         artist.addEventListener("click", function () {
-          window.location.assign(`artist.html`);
+          window.location.assign(`artist.html?id=${data.data[0].artist.id}`);
         });
       }
       // ora collegiamo foto artista a pagina artista
