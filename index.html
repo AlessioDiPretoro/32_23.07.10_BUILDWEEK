@@ -14,8 +14,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <style>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <style>
       body {
         background: rgb(241, 179, 179);
       }
@@ -35,11 +35,9 @@
         background-color: #181818de;
         margin: 1em;
       }
-    </style>
+    </style> -->
   </head>
-
-  <!-- solo per PROVA -->
-  <body class="text-light" style="background-color: #212121">
+  <body class="">
     <div class="row">
       <div class="col col-3">
         <!-- qui dentro andrà la navbar di sinistra -->
@@ -48,26 +46,17 @@
             <div class="header-box">
               <div id="boxNavColor">
                 <div>
-                  <i
-                    id="iconsNav"
-                    class="bi bi-house-door-fill ms-3 text-white"
-                  >
-                    Home</i
-                  >
+                  <i id="iconsNav" class="bi bi-house-door-fill ms-3 text-white"> Home</i>
                 </div>
                 <div>
-                  <i id="iconsNav" class="bi bi-search ms-3 text-white">
-                    Cerca</i
-                  >
+                  <i id="iconsNav" class="bi bi-search ms-3 text-white"> Cerca</i>
                 </div>
               </div>
               <!--bot NAVBAR-->
 
               <div id="boxNavColor">
                 <div>
-                  <i id="iconsNav" class="bi bi bi-collection ms-3 text-white">
-                    La tua libreria</i
-                  >
+                  <i id="iconsNav" class="bi bi bi-collection ms-3 text-white"> La tua libreria</i>
                 </div>
                 <div>PARTE INFO</div>
               </div>
@@ -79,25 +68,29 @@
         <main>
           <!-- qui dentro andrà il Main -->
           <!-- nav bar con freccie e profilo -->
-          <nav
-            class="navbar bg-dark border-bottom border-bottom-dark"
-            data-bs-theme="dark"
-          >
+          <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
             <div class="container-fluid">
-              <div>
-                <a class="navbar-brand"
-                  ><i
-                    class="fa-solid fa-chevron-left"
-                    style="color: #ffffff"
-                  ></i
-                ></a>
-                <a class="navbar-brand">
-                  <i
-                    class="fa-solid fa-chevron-right"
-                    style="color: #ffffff"
-                  ></i>
-                </a>
+              <div class="position-relative w-50 d-flex">
+                <button
+                  class="carousel-control-prev position-static"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next position-static"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
+
               <div class="dropdown">
                 <button
                   class="btn btn-dark dropdown-toggle"
@@ -123,68 +116,169 @@
               </div>
             </div>
           </nav>
-          <!-- Primo blocco canzone -->
-          <div class="row bg-black p-4">
-            <div class="col col-3">
-              <div class="">
-                <img
-                  src="./assets/imgs/main/image-2.jpg"
-                  class="w-100"
-                  alt="Album Top"
-                />
-              </div>
-            </div>
-            <div class="col col-9">
-              <div class="row">
-                <div class="col"><p>ALBUM</p></div>
-                <div class="col text-end"><p>NASCONDI ANNUNCI</p></div>
-              </div>
-              <div class="row">
-                <div class="col"><h2>VIOLA (feet Salmo)</h2></div>
-              </div>
-              <div class="row">
-                <div class="col text-end"><p>Fedez, Salmo</p></div>
-              </div>
-              <div class="row">
-                <div class="col text-end">
-                  <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+          <!-- Primo blocco canzone con carosello-->
+          <div class="container w-100 d-none d-md-block">
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row bg-black p-4">
+                    <div class="col col-3">
+                      <div class="">
+                        <img src="./assets/imgs/main/image-2.jpg" class="w-100" alt="Album Top" />
+                      </div>
+                    </div>
+                    <div class="col col-9">
+                      <div class="row">
+                        <div class="col"><p>ALBUM</p></div>
+                        <div class="col text-end"><p>NASCONDI ANNUNCI</p></div>
+                      </div>
+                      <div class="row">
+                        <div class="col"><h2>VIOLA (feet Salmo)</h2></div>
+                      </div>
+                      <div class="row">
+                        <div class="col text-end"><p>Fedez, Salmo</p></div>
+                      </div>
+                      <div class="row">
+                        <div class="col text-end">
+                          <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div>
+                          <button type="button" class="btn btn-success rounded-4 text-black m-1">
+                            Play
+                          </button>
+                        </div>
+                        <div>
+                          <button type="button" class="btn btn-dark rounded-4 border m-1">
+                            Salva
+                          </button>
+                        </div>
+                        <div>
+                          <button type="button" class="btn btn-dark rounded-4 m-1">...</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row bg-black p-4">
+                    <div class="col col-3">
+                      <div class="">
+                        <img src="./assets/imgs/main/image-5.jpg" class="w-100" alt="Album Top" />
+                      </div>
+                    </div>
+                    <div class="col col-9">
+                      <div class="row">
+                        <div class="col"><p>ALBUM</p></div>
+                        <div class="col text-end"><p>NASCONDI ANNUNCI</p></div>
+                      </div>
+                      <div class="row">
+                        <div class="col"><h2>VIOLA (feet Salmo)</h2></div>
+                      </div>
+                      <div class="row">
+                        <div class="col text-end"><p>Fedez, Salmo</p></div>
+                      </div>
+                      <div class="row">
+                        <div class="col text-end">
+                          <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div>
+                          <button type="button" class="btn btn-success rounded-4 text-black m-1">
+                            Play
+                          </button>
+                        </div>
+                        <div>
+                          <button type="button" class="btn btn-dark rounded-4 border m-1">
+                            Salva
+                          </button>
+                        </div>
+                        <div>
+                          <button type="button" class="btn btn-dark rounded-4 m-1">...</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row bg-black p-4">
+                    <div class="col col-3">
+                      <div class="">
+                        <img src="./assets/imgs/main/image-3.jpg" class="w-100" alt="Album Top" />
+                      </div>
+                    </div>
+                    <div class="col col-9">
+                      <div class="row">
+                        <div class="col"><p>ALBUM</p></div>
+                        <div class="col text-end"><p>NASCONDI ANNUNCI</p></div>
+                      </div>
+                      <div class="row">
+                        <div class="col"><h2>VIOLA (feet Salmo)</h2></div>
+                      </div>
+                      <div class="row">
+                        <div class="col text-end"><p>Fedez, Salmo</p></div>
+                      </div>
+                      <div class="row">
+                        <div class="col text-end">
+                          <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div>
+                          <button type="button" class="btn btn-success rounded-4 text-black m-1">
+                            Play
+                          </button>
+                        </div>
+                        <div>
+                          <button type="button" class="btn btn-dark rounded-4 border m-1">
+                            Salva
+                          </button>
+                        </div>
+                        <div>
+                          <button type="button" class="btn btn-dark rounded-4 m-1">...</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="d-flex">
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-success rounded-4 text-black m-1"
-                  >
-                    Play
-                  </button>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-dark rounded-4 border m-1"
-                  >
-                    Salva
-                  </button>
-                </div>
-                <div>
-                  <button type="button" class="btn btn-dark rounded-4 m-1">
-                    ...
-                  </button>
-                </div>
-              </div>
+              <button
+                class="carousel-control-prev d-none"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next d-none"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
+
           <!-- Secondo blocco di Album/Artisti - brani che ti piaccono in pos 4...? -->
-          <div class="row">
+          <div class="row mt-3">
             <div class="col p-0">
               <h2>Buonasera</h2>
             </div>
+            <div class="col">
+              <div class="d-md-none d-flex justify-content-end" id="hiddenMenu">
+                <a href=""><i class="fa-regular fa-bell" style="color: #ffffff"></i></a>
+                <a href=""><i class="fa-regular fa-clock" style="color: #ffffff"></i></a>
+                <a href=""><i class="fa-solid fa-gear" style="color: #ffffff"></i></a>
+              </div>
+            </div>
           </div>
-          <div
-            class="row justify-content-between row-cols-3 g-2"
-            id="card1Container"
-          >
+          <div class="row justify-content-between row-cols-2 row-cols-md-3 g-2" id="card1Container">
             <!-- dentro id="card1Container" creare le card -->
             <!-- singola card -->
             <div class="col playlist">
@@ -308,27 +402,231 @@
             </div>
           </div>
           <!-- Terzo blocco di Album/Artisti -->
-          <div class="row">
-            <div class="col p-0">
-              <h2>Altro di ciò che ti piace</h2>
+          <div class="container w-100 d-none d-md-block">
+            <div class="row mt-3">
+              <div class="col p-0">
+                <h2>Altro di ciò che ti piace</h2>
+              </div>
+            </div>
+            <div class="row row-cols-3 row-cols-md-5 gx-2" id="card2Container">
+              <!-- Singola card -->
+              <div class="col">
+                <div class="card" style="background-color: #2d2d2d">
+                  <img
+                    src="./assets/imgs/main/image-10.jpg"
+                    width="100%"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body text-white">
+                    <p class="card-title">Titolo PlayList</p>
+                    <p class="card-text">Descrizione play list?.</p>
+                  </div>
+                </div>
+                <!-- TODO card -->
+              </div>
+              <!-- Singola card -->
+              <div class="col">
+                <div class="card" style="background-color: #2d2d2d">
+                  <img
+                    src="./assets/imgs/main/image-10.jpg"
+                    width="100%"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body text-white">
+                    <p class="card-title">Titolo PlayList</p>
+                    <p class="card-text">Descrizione play list?.</p>
+                  </div>
+                </div>
+                <!-- TODO card -->
+              </div>
+              <!-- Singola card -->
+              <div class="col">
+                <div class="card" style="background-color: #2d2d2d">
+                  <img
+                    src="./assets/imgs/main/image-10.jpg"
+                    width="100%"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body text-white">
+                    <p class="card-title">Titolo PlayList</p>
+                    <p class="card-text">Descrizione play list?.</p>
+                  </div>
+                </div>
+                <!-- TODO card -->
+              </div>
+              <!-- Singola card -->
+              <div class="col">
+                <div class="card" style="background-color: #2d2d2d">
+                  <img
+                    src="./assets/imgs/main/image-10.jpg"
+                    width="100%"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body text-white">
+                    <p class="card-title">Titolo PlayList</p>
+                    <p class="card-text">Descrizione play list?.</p>
+                  </div>
+                </div>
+                <!-- TODO card -->
+              </div>
+              <!-- Singola card -->
+              <div class="col">
+                <div class="card" style="background-color: #2d2d2d">
+                  <img
+                    src="./assets/imgs/main/image-10.jpg"
+                    width="100%"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body text-white">
+                    <p class="card-title">Titolo PlayList</p>
+                    <p class="card-text">Descrizione play list?.</p>
+                  </div>
+                </div>
+                <!-- TODO card -->
+              </div>
             </div>
           </div>
-          <div class="row row-cols-4 gx-2" id="card2Container">
-            <!-- Singola card -->
-            <div class="col">
-              <div class="card" style="background-color: #2d2d2d">
-                <img
-                  src="./assets/imgs/main/image-10.jpg"
-                  width="100%"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body text-white">
-                  <p class="card-title">Titolo PlayList</p>
-                  <p class="card-text">Descrizione play list?.</p>
+          <!-- playlist home mobile -->
+          <div class="container w-100 d-md-none mt-3">
+            <!-- singola card -->
+            <div class="row row-cols-1 mb-3" id="playlist-home-mobile">
+              <div class="col p-0">
+                <div class="card text-white p-3" style="background-color: #2d2d2d">
+                  <div class="row">
+                    <div class="col">
+                      <div class="row g-0 flex-nowrap">
+                        <div class="col-6">
+                          <img
+                            src="./assets/imgs/main/image-14.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col col-6">
+                          <div class="card-body">
+                            <h5 class="card-title">Playlist</h5>
+                            <p class="card-text">Descrizione Playlist.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col d-flex align-items-center">
+                      <a href="" class="">
+                        <i class="fa-solid fa-heart" style="color: #00ff00"></i>
+                      </a>
+                      <a href="" class="">
+                        <i class="fa-solid fa-ellipsis-vertical" style="color: #808080"></i>
+                      </a>
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-end">
+                      <span>16 Brani</span>
+                      <a href="" class="">
+                        <i
+                          class="fa-solid fa-circle-play rounded-circle border-0"
+                          style="color: #0a0a0a; background-color: #ffffff"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <!-- TODO card -->
+            </div>
+            <!-- singola card -->
+            <div class="row row-cols-1 mb-3" id="playlist-home-mobile">
+              <div class="col p-0">
+                <div class="card text-white p-3" style="background-color: #2d2d2d">
+                  <div class="row">
+                    <div class="col">
+                      <div class="row g-0 flex-nowrap">
+                        <div class="col-6">
+                          <img
+                            src="./assets/imgs/main/image-14.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col col-6">
+                          <div class="card-body">
+                            <h5 class="card-title">Playlist</h5>
+                            <p class="card-text">Descrizione Playlist.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col d-flex align-items-center">
+                      <a href="" class="">
+                        <i class="fa-solid fa-heart" style="color: #00ff00"></i>
+                      </a>
+                      <a href="" class="">
+                        <i class="fa-solid fa-ellipsis-vertical" style="color: #808080"></i>
+                      </a>
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-end">
+                      <span>16 Brani</span>
+                      <a href="" class="">
+                        <i
+                          class="fa-solid fa-circle-play rounded-circle border-0"
+                          style="color: #0a0a0a; background-color: #ffffff"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- singola card -->
+            <div class="row row-cols-1 mb-3" id="playlist-home-mobile">
+              <div class="col p-0">
+                <div class="card text-white p-3" style="background-color: #2d2d2d">
+                  <div class="row">
+                    <div class="col">
+                      <div class="row g-0 flex-nowrap">
+                        <div class="col-6">
+                          <img
+                            src="./assets/imgs/main/image-14.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col col-6">
+                          <div class="card-body">
+                            <h5 class="card-title">Playlist</h5>
+                            <p class="card-text">Descrizione Playlist.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col d-flex align-items-center">
+                      <a href="" class="">
+                        <i class="fa-solid fa-heart" style="color: #00ff00"></i>
+                      </a>
+                      <a href="" class="">
+                        <i class="fa-solid fa-ellipsis-vertical" style="color: #808080"></i>
+                      </a>
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-end">
+                      <span>16 Brani</span>
+                      <a href="" class="">
+                        <i
+                          class="fa-solid fa-circle-play rounded-circle border-0"
+                          style="color: #0a0a0a; background-color: #ffffff"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </main>
