@@ -2,10 +2,10 @@ let url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 const form = document.getElementById("search");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  const contenitoreRicerca = document.getElementById("contenitoreRicerca");
+  contenitoreRicerca.innerText = "";
   let input = document.querySelector("input").value;
   console.log(input);
-
-  const contenitoreRicerca = document.getElementById("contenitoreRicerca");
 
   const serch = async function () {
     try {
