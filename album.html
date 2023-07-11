@@ -10,13 +10,509 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body class="">
+    <div class="row">
+      <!-- qui dentro andrà la navbar di sinistra -->
+      <div class="col col-12 col-md-2">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="flex-column fd- col-auto align-items-center bg-dark min-vh-100">
+              <!--Inizio navtop-->
+              <div>
+                <a
+                  class="text-white text-decoration-none d-flex align-items-center ms-4"
+                  role="button"
+                  ><span class="fs-5">Spotify</span></a
+                >
+                <ul class="nav nav-pills flex-column mt-2 mt-sm-o" id="menu">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-white">
+                      <i id="iconsNav" class="bi bi-house-door-fill ms-3 text-white"></i>
+                      <span class="ms-2">Home</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="nav-link text-white link-offset-2 link-underline link-underline-opacity-100"
+                    >
+                      <i id="iconsNav" class="bi bi-search ms-3 text-white"></i>
+                      <span class="ms-2">Cerca</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!--INIZIO NAVBOT-->
+              <div>
+                <div class="nav nav-pills flex-column mt-2 mt-sm-o">
+                  <a href="#" class="nav-link text-white">
+                    <i id="iconsNav" class="bi bi bi-collection ms-3 text-white"></i>
+                    <span class="ms-2">La tua Libreria</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- qui dentro andrà il Main -->
+      <div class="col col-12 col-md-8">
+        <main>
+          <!-- nav bar con freccie e profilo -->
+          <nav
+            class="navbar bg-transparent border-bottom border-bottom-dark p-0"
+            data-bs-theme="dark"
+          >
+            <div id="navBarTop" class="container-fluid">
+              <div class="position-relative w-50 d-flex">
+                <button
+                  class="carousel-control-prev position-static"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next position-static"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <div class="dropdown">
+                <button
+                  class="btn btn-trasparent dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="./assets/imgs/search/image-1.jpeg"
+                    class="rounded-circle"
+                    alt="UserPhoto"
+                    width="30px"
+                  />
+                  User Name
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- Primo blocco canzone -->
+          <div class="container w-100 p-0">
+            <div class="cartArtistMain card text-bg-dark" style="height: 400px">
+              <img
+                src="./assets/imgs/main/image-2.jpg"
+                class="card-img"
+                style="height: 400px"
+                alt="..."
+              />
+              <div class="card-img-overlay" style="top: auto">
+                <p class="card-text">
+                  <i class="fa-solid fa-circle-check"></i><small>Artista verificato</small>
+                </p>
+                <h5 class="card-title fs-1">Nome Artista</h5>
+                <p class="card-text">n°3450546 Ascoltatori mensili</p>
+              </div>
+            </div>
+          </div>
+          <!-- Blocco menù -->
+          <div class="container w-100 p-0">
+            <!-- menù player mobile -->
+            <div class="d-flex align-items-center justify-content-between my-3 d-md-none">
+              <div class="d-flex align-items-center">
+                <button type="button" class="btn btn-dark mx-3">Seguimi</button>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+              <div class="d-flex align-items-center">
+                <button type="button" class="btn btn-dark">
+                  <i class="fa-solid fa-arrows-turn-right" style="color: #00ff00"></i>
+                </button>
+                <i
+                  class="fa-solid fa-circle-play fs-1 mx-3"
+                  style="color: #00ff00; font-size: 2.5em !important"
+                ></i>
+              </div>
+            </div>
+            <!-- menù player desktop -->
+            <div class="d-flex align-items-center d-none d-md-flex">
+              <i class="fa-solid fa-circle-play fs-1 mx-3" style="color: #00ff00"></i>
+              <div class="d-flex align-items-center my-4">
+                <div>
+                  <button type="button" class="btn btn-dark border m-1">FOLLOWING</button>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-dark m-1">...</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Secondo blocco di Lista canzoni -->
+          <div class="container w-100 p-0">
+            <h2>Popolari</h2>
+            <!-- sezione brani playlist -->
+            <div class="row flex-column-reverse flex-md-row">
+              <!-- contenitore delle canzoni -->
+              <div class="col col-12 col-md-7 flex-grow-1">
+                <!-- per ogni riga creare questa class row -->
+                <div class="row p-0">
+                  <div class="col"></div>
+                  <!-- card singola traccia -->
+                  <div
+                    class="cardArtistSongs d-flex align-items-center justify-content-evenly my-3 my-md-4"
+                  >
+                    <div class="col col-1 d-none d-md-block">1</div>
+
+                    <div
+                      class="col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
+                    >
+                      <div class="">
+                        <h2>Titolo</h2>
+                      </div>
+                      <div class="">
+                        <p>n° visualizzazioni</p>
+                      </div>
+                    </div>
+                    <div class="col col-2">
+                      <p class="d-none d-md-flex">durata</p>
+                      <p class="d-md-none"><i class="fa-solid fa-ellipsis-vertical"></i></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- sezione brani che ti piacciono -->
+              <div class="col col-12 col-md-5 d-md-none">
+                <h2 class="d-none d-md-block">Brani che ti piacciono</h2>
+                <!-- Singola cardYouLike -->
+                <div class="col cardYouLike">
+                  <div class="row align-items-center p-0 m-0 my-4">
+                    <div class="col col-2 p-0">
+                      <img
+                        src="./assets/imgs/main/image-4.jpg"
+                        class="rounded-circle"
+                        alt="AlbumPhoto"
+                        width="100%"
+                      />
+                    </div>
+                    <div class="col col-10 pe-0">
+                      <p id="artistName" class="d-none d-md-block m-0">Nome artista</p>
+                      <p id="artistName" class="d-md-none m-0">Brani che ti piacciono</p>
+                      <p class="m-0">Titolo canzone</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row justify-content-between row-cols-2 row-cols-md-3 g-2"
+              id="card1Container"
+            >
+              <!-- dentro id="card1Container" creare le card -->
+              <!-- singola card -->
+            </div>
+          </div>
+        </main>
+        <!-- Footer -->
+        <footer class="d-none d-md-block">
+          <div class="row mainRow row-cols-4 mt-5">
+            <div class="col">
+              <a href="">Azienda</a>
+            </div>
+            <div class="col">
+              <a href="">Community</a>
+            </div>
+            <div class="col">
+              <a href="">Link utili</a>
+            </div>
+            <div class="col text-end">
+              <a href="https://www.instagram.com/spotify/">
+                <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
+              </a>
+              <a href="https://twitter.com/SpotifyItaly">
+                <i class="fa-brands fa-twitter" style="color: #ffffff"></i>
+              </a>
+              <a href="https://www.facebook.com/Spotify">
+                <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
+              </a>
+            </div>
+          </div>
+          <div class="row secondRow row-cols-4">
+            <div class="col">
+              <a href="">Chi siamo</a>
+            </div>
+            <div class="col">
+              <a href="">Per artisti</a>
+            </div>
+            <div class="col">
+              <a href="">Assistenza</a>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row secondRow row-cols-4">
+            <div class="col">
+              <a href="">Opportunità di lavoro</a>
+            </div>
+            <div class="col">
+              <a href="">Sviluppatori</a>
+            </div>
+            <div class="col">
+              <a href="">App per cellulare gratuita</a>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row secondRow row-cols-4">
+            <div class="col">
+              <a href="">For the Record</a>
+            </div>
+            <div class="col">
+              <a href="">Pubblicità</a>
+            </div>
+            <div class="col">
+              <a href="">Diritti del consumatore</a>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row secondRow row-cols-4">
+            <div class="col">
+              <a href=""></a>
+            </div>
+            <div class="col">
+              <a href="">Investitori</a>
+            </div>
+            <div class="col">
+              <a href=""></a>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row secondRow row-cols-4">
+            <div class="col">
+              <a href=""></a>
+            </div>
+            <div class="col">
+              <a href="">Venditori</a>
+            </div>
+            <div class="col">
+              <a href=""></a>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row secondRow row-cols-4">
+            <div class="col">
+              <a href=""></a>
+            </div>
+            <div class="col">
+              <a href="">Spotify for Work</a>
+            </div>
+            <div class="col">
+              <a href=""></a>
+            </div>
+            <div class="col"></div>
+          </div>
+          <p>&copy; 2023 Spotify AB</p>
+        </footer>
+      </div>
+      <!-- qui dentro andrà la navbar di destra -->
+      <div class="col col-2 bg-black d-none d-md-block">
+        <div class="container w-100 p-0 sticky-top">
+          <nav id="navBarSx" class="navbar navbar-expand-xl bg-black" data-bs-theme="dark">
+            <div class="container-fluid p-0">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse justify-content-between"
+                id="navbarSupportedContent"
+              >
+                <div class="nav-item">
+                  <a href="#" class="text-white text-decoration-none">Attività amici</a>
+                </div>
+                <div class="nav-item">
+                  <div>
+                    <a href=""><i class="fa-solid fa-user-plus pe-2" style="color: #ffffff"></i></a>
+                    <a href=""><i class="fa-solid fa-x pe-2" style="color: #ffffff"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- cards della nav bad destra -->
+          <!-- Singola card -->
+          <!-- singola card -->
+          <div class="col playlist">
+            <div class="row align-items-center rounded-2 p-0 m-0" style="background-color: #2d2d2d">
+              <div class="col col-3 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-7 pe-0">
+                <p id="artistName" class="m-0">Nome artista</p>
+                <p class="m-0">Titolo canzone</p>
+              </div>
+
+              <div class="col col-2 p-0">
+                <p>durata</p>
+              </div>
+            </div>
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0"></div>
+              <div class="col col-7">
+                <p class="m-0">Titolo album</p>
+              </div>
+            </div>
+          </div>
+          <!-- Singola card -->
+          <div class="col cardNavbarDx">
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-7 pe-0">
+                <p id="artistName" class="m-0">Nome artista</p>
+                <p class="m-0">Titolo canzone</p>
+              </div>
+
+              <div class="col col-2 p-0">
+                <p>durata</p>
+              </div>
+            </div>
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0"></div>
+              <div class="col col-7">
+                <p class="m-0">Titolo album</p>
+              </div>
+            </div>
+          </div>
+          <!-- Singola card -->
+          <div class="col cardNavbarDx">
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-7 pe-0">
+                <p id="artistName" class="m-0">Nome artista</p>
+                <p class="m-0">Titolo canzone</p>
+              </div>
+
+              <div class="col col-2 p-0">
+                <p>durata</p>
+              </div>
+            </div>
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0"></div>
+              <div class="col col-7">
+                <p class="m-0">Titolo album</p>
+              </div>
+            </div>
+          </div>
+          <!-- Singola card -->
+          <div class="col cardNavbarDx">
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-7 pe-0">
+                <p id="artistName" class="m-0">Nome artista</p>
+                <p class="m-0">Titolo canzone</p>
+              </div>
+
+              <div class="col col-2 p-0">
+                <p>durata</p>
+              </div>
+            </div>
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0"></div>
+              <div class="col col-7">
+                <p class="m-0">Titolo album</p>
+              </div>
+            </div>
+          </div>
+          <!-- Singola card -->
+          <div class="col cardNavbarDx">
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-7 pe-0">
+                <p id="artistName" class="m-0">Nome artista</p>
+                <p class="m-0">Titolo canzone</p>
+              </div>
+
+              <div class="col col-2 p-0">
+                <p>durata</p>
+              </div>
+            </div>
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0"></div>
+              <div class="col col-7">
+                <p class="m-0">Titolo album</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="playerContainer">
+      <!-- TODO player -->
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <!-- TODO collegare script corretto -->
   </body>
 </html>
