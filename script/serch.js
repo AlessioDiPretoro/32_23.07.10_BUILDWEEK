@@ -6,7 +6,9 @@ form.addEventListener("submit", function (e) {
 
   const contenitoreRicerca = document.getElementById("contenitoreRicerca");
   contenitoreRicerca.innerText = "";
+
   let input = document.querySelector("input").value;
+
   console.log(input);
   console.log("ok");
   const serch = async function () {
