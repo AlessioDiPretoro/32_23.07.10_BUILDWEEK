@@ -14,19 +14,17 @@
       img {
         position: absolute;
         height: 80px;
-        bottom: 11px;
-        right: 36px;
+        bottom: 1px;
+        right: 6px;
         rotate: 25deg;
-        z-index: -3;
+        margin: -75px 0 0 -100px;
       }
       .w-75 {
-        z-index: -2;
+        position: relative;
+        overflow: hidden;
       }
       .col {
         height: 150px;
-        background-color: wheat;
-        position: relative;
-        z-index: 10;
       }
     </style>
   </head>
@@ -35,8 +33,9 @@
     <input type="text" placeholder="Cerca" />
     <div class="row row-cols-2 mt-1 justify-content-center">
       <div class="col text-white d-flex justify-content-center">
-        <div class="w-75 bg-success m-3">Podcast</div>
-        <img src="assets/imgs/search/image-1.jpeg" />
+        <div class="w-75 bg-success m-3">
+          Podcast<img src="assets/imgs/search/image-1.jpeg" />
+        </div>
       </div>
       <div class="col text-white d-flex justify-content-center">
         <div class="w-75 bg-success m-3">Create per te</div>
