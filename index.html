@@ -24,23 +24,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
   </head>
-  <style>
-    #nab1 {
-      min-width: 264px;
-    }
-  </style>
   <body class="container-fluid">
-    <div class="row">
-      <div class="col col-2">
-        <!-- qui dentro andrà la navbar di sinistra -->
+    <div class="row flex-column-reverse flex-md-row">
+      <!-- qui dentro andrà la navbar di sinistra -->
+      <div class="col col-12 col-md-2">
         <!--==================================================================-->
-        <div class="container-fluid">
+        <div class="container-fluid sticky-top sticky-md-top">
           <div class="row">
-            <div
-              class="flex-column col-auto align-items-center bg-dark min-vh-100"
-            >
+            <div class="col d-flex flex-md-column justify-content-around bg-dark">
               <!--Inizio navtop-->
-              <div class="text-center mt-2">
+              <div class="d-none d-md-block text-center mt-2">
                 <svg
                   width="120"
                   height="50"
@@ -56,66 +49,51 @@
                 </svg>
               </div>
               <div>
-                <ul class="nav nav-pills flex-column mt-2 mt-sm-o" id="menu">
-                  <li class="nav-item my-2">
-                    <a href="#" class="nav-link text-white p-0">
-                      <i
-                        id="iconsNav"
-                        class="bi bi-house-door-fill ms-3 text-white"
-                      ></i>
-                      <span class="ms-2">Home</span>
-                    </a>
-                  </li>
-                  <li class="my-2">
-                    <a
-                      id="search"
-                      href="#"
-                      class="nav-link text-white link-offset-2 link-underline link-underline-opacity-100 p-0"
-                    >
-                      <i id="iconsNav" class="bi bi-search ms-3 text-white"></i>
-                      <span class="ms-2">Cerca</span>
-                    </a>
-                  </li>
-                </ul>
+                <a href="#" class="nav-link text-white p-0">
+                  <i id="iconsNav" class="bi bi-house-door-fill ms-3 text-white"></i>
+                  <span class="ms-2">Home</span>
+                </a>
               </div>
-              <!--INIZIO NAVBOT-->
               <div>
-                <div class="nav nav-pills flex-column mt-2 mt-sm-o">
-                  <a href="#" class="nav-link text-white">
-                    <i
-                      id="iconsNav"
-                      class="bi bi bi-collection ms-3 text-white"
-                    ></i>
-                    <span class="ms-2">La tua Libreria</span>
-                  </a>
-                </div>
-
+                <a
+                  href="#"
+                  class="nav-link text-white link-offset-2 link-underline link-underline-opacity-100 p-0"
+                >
+                  <i id="iconsNav" class="bi bi-search ms-3 text-white"></i>
+                  <span class="ms-2">Cerca</span>
+                </a>
+              </div>
+              <div>
+                <a href="#" class="nav-link text-white my-2">
+                  <i id="iconsNav" class="bi bi bi-collection ms-3 text-white"></i>
+                  <span class="ms-2">La tua Libreria</span>
+                </a>
+              </div>
+              <div class="d-none d-md-block">
                 <div class="mt-5">
                   <a href="#" class="nav-link text-white my-2">
-                    <i
-                      id="iconsNav"
-                      class="bi bi-plus-square-fill ms-3 text-white"
-                    ></i>
+                    <i id="iconsNav" class="bi bi-plus-square-fill ms-3 text-white"></i>
                     <span class="ms-2">Crea playlist</span>
                   </a>
                 </div>
                 <div>
                   <a href="#" class="nav-link text-white my-2">
-                    <i
-                      id="iconsNav"
-                      class="bi bi-hearts ms-3 text-white fa-x5"
-                    ></i>
+                    <i id="iconsNav" class="bi bi-hearts ms-3 text-white fa-x5"></i>
                     <span class="ms-2">Brani che ti piacciono</span>
                   </a>
                 </div>
                 <div>
                   <a href="#" class="nav-link text-white my-2">
-                    <i
-                      id="iconsNav"
-                      class="bi bi-bookmark-fill ms-3 text-white bg-success"
-                    ></i>
+                    <i id="iconsNav" class="bi bi-bookmark-fill ms-3 text-white bg-success"></i>
                     <span class="ms-2">I tuoi episodi</span>
                   </a>
+                  <!-- lista che si autocomplila -->
+                  <ul>
+                    <li>lista che si autocomplila</li>
+                    <li>lista che si autocomplila</li>
+                    <li>lista che si autocomplila</li>
+                    <li>lista che si autocomplila</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -124,14 +102,11 @@
         <!--==============================================================-->
       </div>
       <!--fine navbar-->
-      <div class="col col-8">
+      <!-- qui dentro andrà il Main -->
+      <div class="col col-12 col-md-8">
         <main>
-          <!-- qui dentro andrà il Main -->
           <!-- nav bar con freccie e profilo -->
-          <nav
-            class="navbar bg-dark border-bottom border-bottom-dark"
-            data-bs-theme="dark"
-          >
+          <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
             <div class="container-fluid">
               <div class="position-relative w-50 d-flex">
                 <button
@@ -140,10 +115,7 @@
                   data-bs-target="#carouselExample"
                   data-bs-slide="prev"
                 >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
                 <button
@@ -152,10 +124,7 @@
                   data-bs-target="#carouselExample"
                   data-bs-slide="next"
                 >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
@@ -193,11 +162,7 @@
                   <div class="row bg-black p-4">
                     <div class="col col-3">
                       <div class="">
-                        <img
-                          src="./assets/imgs/main/image-2.jpg"
-                          class="w-100"
-                          alt="Album Top"
-                        />
+                        <img src="./assets/imgs/main/image-2.jpg" class="w-100" alt="Album Top" />
                       </div>
                     </div>
                     <div class="col col-9">
@@ -218,28 +183,17 @@
                       </div>
                       <div class="d-flex">
                         <div>
-                          <button
-                            type="button"
-                            class="btn btn-success rounded-4 text-black m-1"
-                          >
+                          <button type="button" class="btn btn-success rounded-4 text-black m-1">
                             Play
                           </button>
                         </div>
                         <div>
-                          <button
-                            type="button"
-                            class="btn btn-dark rounded-4 border m-1"
-                          >
+                          <button type="button" class="btn btn-dark rounded-4 border m-1">
                             Salva
                           </button>
                         </div>
                         <div>
-                          <button
-                            type="button"
-                            class="btn btn-dark rounded-4 m-1"
-                          >
-                            ...
-                          </button>
+                          <button type="button" class="btn btn-dark rounded-4 m-1">...</button>
                         </div>
                       </div>
                     </div>
@@ -249,11 +203,7 @@
                   <div class="row bg-black p-4">
                     <div class="col col-3">
                       <div class="">
-                        <img
-                          src="./assets/imgs/main/image-5.jpg"
-                          class="w-100"
-                          alt="Album Top"
-                        />
+                        <img src="./assets/imgs/main/image-5.jpg" class="w-100" alt="Album Top" />
                       </div>
                     </div>
                     <div class="col col-9">
@@ -274,28 +224,17 @@
                       </div>
                       <div class="d-flex">
                         <div>
-                          <button
-                            type="button"
-                            class="btn btn-success rounded-4 text-black m-1"
-                          >
+                          <button type="button" class="btn btn-success rounded-4 text-black m-1">
                             Play
                           </button>
                         </div>
                         <div>
-                          <button
-                            type="button"
-                            class="btn btn-dark rounded-4 border m-1"
-                          >
+                          <button type="button" class="btn btn-dark rounded-4 border m-1">
                             Salva
                           </button>
                         </div>
                         <div>
-                          <button
-                            type="button"
-                            class="btn btn-dark rounded-4 m-1"
-                          >
-                            ...
-                          </button>
+                          <button type="button" class="btn btn-dark rounded-4 m-1">...</button>
                         </div>
                       </div>
                     </div>
@@ -305,11 +244,7 @@
                   <div class="row bg-black p-4">
                     <div class="col col-3">
                       <div class="">
-                        <img
-                          src="./assets/imgs/main/image-3.jpg"
-                          class="w-100"
-                          alt="Album Top"
-                        />
+                        <img src="./assets/imgs/main/image-3.jpg" class="w-100" alt="Album Top" />
                       </div>
                     </div>
                     <div class="col col-9">
@@ -330,28 +265,17 @@
                       </div>
                       <div class="d-flex">
                         <div>
-                          <button
-                            type="button"
-                            class="btn btn-success rounded-4 text-black m-1"
-                          >
+                          <button type="button" class="btn btn-success rounded-4 text-black m-1">
                             Play
                           </button>
                         </div>
                         <div>
-                          <button
-                            type="button"
-                            class="btn btn-dark rounded-4 border m-1"
-                          >
+                          <button type="button" class="btn btn-dark rounded-4 border m-1">
                             Salva
                           </button>
                         </div>
                         <div>
-                          <button
-                            type="button"
-                            class="btn btn-dark rounded-4 m-1"
-                          >
-                            ...
-                          </button>
+                          <button type="button" class="btn btn-dark rounded-4 m-1">...</button>
                         </div>
                       </div>
                     </div>
@@ -364,10 +288,7 @@
                 data-bs-target="#carouselExample"
                 data-bs-slide="prev"
               >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
               <button
@@ -376,10 +297,7 @@
                 data-bs-target="#carouselExample"
                 data-bs-slide="next"
               >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
@@ -392,19 +310,10 @@
                 <h2 class="m-0">Buonasera</h2>
               </div>
               <div class="col">
-                <div
-                  class="d-md-none d-flex justify-content-end"
-                  id="hiddenMenu"
-                >
-                  <a href=""
-                    ><i class="fa-regular fa-bell" style="color: #ffffff"></i
-                  ></a>
-                  <a href=""
-                    ><i class="fa-regular fa-clock" style="color: #ffffff"></i
-                  ></a>
-                  <a href=""
-                    ><i class="fa-solid fa-gear" style="color: #ffffff"></i
-                  ></a>
+                <div class="d-md-none d-flex justify-content-end" id="hiddenMenu">
+                  <a href=""><i class="fa-regular fa-bell" style="color: #ffffff"></i></a>
+                  <a href=""><i class="fa-regular fa-clock" style="color: #ffffff"></i></a>
+                  <a href=""><i class="fa-solid fa-gear" style="color: #ffffff"></i></a>
                 </div>
               </div>
             </div>
@@ -620,10 +529,7 @@
             <!-- singola card -->
             <div class="row row-cols-1 mb-3" id="playlist-home-mobile">
               <div class="col p-0">
-                <div
-                  class="card text-white p-3"
-                  style="background-color: #2d2d2d"
-                >
+                <div class="card text-white p-3" style="background-color: #2d2d2d">
                   <div class="row">
                     <div class="col">
                       <div class="row g-0 flex-nowrap">
@@ -649,15 +555,10 @@
                         <i class="fa-solid fa-heart" style="color: #00ff00"></i>
                       </a>
                       <a href="" class="">
-                        <i
-                          class="fa-solid fa-ellipsis-vertical"
-                          style="color: #808080"
-                        ></i>
+                        <i class="fa-solid fa-ellipsis-vertical" style="color: #808080"></i>
                       </a>
                     </div>
-                    <div
-                      class="col d-flex align-items-center justify-content-end"
-                    >
+                    <div class="col d-flex align-items-center justify-content-end">
                       <span>16 Brani</span>
                       <a href="" class="">
                         <i
@@ -673,10 +574,7 @@
             <!-- singola card -->
             <div class="row row-cols-1 mb-3" id="playlist-home-mobile">
               <div class="col p-0">
-                <div
-                  class="card text-white p-3"
-                  style="background-color: #2d2d2d"
-                >
+                <div class="card text-white p-3" style="background-color: #2d2d2d">
                   <div class="row">
                     <div class="col">
                       <div class="row g-0 flex-nowrap">
@@ -702,15 +600,10 @@
                         <i class="fa-solid fa-heart" style="color: #00ff00"></i>
                       </a>
                       <a href="" class="">
-                        <i
-                          class="fa-solid fa-ellipsis-vertical"
-                          style="color: #808080"
-                        ></i>
+                        <i class="fa-solid fa-ellipsis-vertical" style="color: #808080"></i>
                       </a>
                     </div>
-                    <div
-                      class="col d-flex align-items-center justify-content-end"
-                    >
+                    <div class="col d-flex align-items-center justify-content-end">
                       <span>16 Brani</span>
                       <a href="" class="">
                         <i
@@ -726,10 +619,7 @@
             <!-- singola card -->
             <div class="row row-cols-1 mb-3" id="playlist-home-mobile">
               <div class="col p-0">
-                <div
-                  class="card text-white p-3"
-                  style="background-color: #2d2d2d"
-                >
+                <div class="card text-white p-3" style="background-color: #2d2d2d">
                   <div class="row">
                     <div class="col">
                       <div class="row g-0 flex-nowrap">
@@ -755,15 +645,10 @@
                         <i class="fa-solid fa-heart" style="color: #00ff00"></i>
                       </a>
                       <a href="" class="">
-                        <i
-                          class="fa-solid fa-ellipsis-vertical"
-                          style="color: #808080"
-                        ></i>
+                        <i class="fa-solid fa-ellipsis-vertical" style="color: #808080"></i>
                       </a>
                     </div>
-                    <div
-                      class="col d-flex align-items-center justify-content-end"
-                    >
+                    <div class="col d-flex align-items-center justify-content-end">
                       <span>16 Brani</span>
                       <a href="" class="">
                         <i
@@ -779,7 +664,7 @@
           </div>
         </main>
         <!-- Footer -->
-        <footer>
+        <footer class="d-none d-md-block">
           <div class="row mainRow row-cols-4 mt-5">
             <div class="col">
               <a href="">Azienda</a>
@@ -878,13 +763,9 @@
         </footer>
       </div>
       <!-- qui dentro andrà la navbar di destra -->
-      <div class="col col-2 p-0 fs-6 bg-black">
-        <div class="container w-100 sticky-top">
-          <nav
-            id="navBarSx"
-            class="navbar navbar-expand-xl bg-black"
-            data-bs-theme="dark"
-          >
+      <div class="col col-2 bg-black d-none d-md-block">
+        <div class="container w-100 p-0 sticky-top">
+          <nav id="navBarSx" class="navbar navbar-expand-xl bg-black" data-bs-theme="dark">
             <div class="container-fluid p-0">
               <button
                 class="navbar-toggler"
@@ -902,21 +783,12 @@
                 id="navbarSupportedContent"
               >
                 <div class="nav-item">
-                  <a href="#" class="text-white text-decoration-none"
-                    >Attività amici</a
-                  >
+                  <a href="#" class="text-white text-decoration-none">Attività amici</a>
                 </div>
                 <div class="nav-item">
                   <div>
-                    <a href=""
-                      ><i
-                        class="fa-solid fa-user-plus pe-2"
-                        style="color: #ffffff"
-                      ></i
-                    ></a>
-                    <a href=""
-                      ><i class="fa-solid fa-x pe-2" style="color: #ffffff"></i
-                    ></a>
+                    <a href=""><i class="fa-solid fa-user-plus pe-2" style="color: #ffffff"></i></a>
+                    <a href=""><i class="fa-solid fa-x pe-2" style="color: #ffffff"></i></a>
                   </div>
                 </div>
               </div>
@@ -926,10 +798,7 @@
           <!-- Singola card -->
           <!-- singola card -->
           <div class="col playlist">
-            <div
-              class="row align-items-center rounded-2 p-0 m-0"
-              style="background-color: #2d2d2d"
-            >
+            <div class="row align-items-center rounded-2 p-0 m-0" style="background-color: #2d2d2d">
               <div class="col col-3 p-0">
                 <img
                   src="./assets/imgs/main/image-4.jpg"
@@ -1076,85 +945,3 @@
     <script src="./script/script.js"></script>
   </body>
 </html>
-
-<!-- qui dentro andrà la navbar di sinistra -->
-<!-- <div class="main-container d-flex">
-          <div class="sidebar" id="sideBar">
-            <div class="header-box">
-              <div id="boxNavColor">
-                <div>
-                  <i
-                    id="iconsNav"
-                    class="bi bi-house-door-fill ms-3 text-white"
-                  >
-                    Home</i
-                  >
-                </div>
-                <div>
-                  <i id="iconsNav" class="bi bi-search ms-3 text-white">
-                    Cerca</i
-                  >
-                </div>
-              </div>
-              
-              bot NAVBAR
-
-              <div id="boxNavColor">
-                <div>
-                  <i id="iconsNav" class="bi bi bi-collection ms-3 text-white">
-                    La tua libreria</i
-                  >
-                </div>
-                <div>PARTE INFO</div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-<!-- PROVA -->
-<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img
-        src=""
-        alt="Logo"
-        width="30"
-        height="24"
-        class="d-inline-block align-text-top"
-      />
-      Home
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarTogglerDemo02"
-      aria-controls="navbarTogglerDemo02"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Cerca</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">La tua libreria</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success" type="submit">
-          Search
-        </button>
-      </form>
-    </div>
-  </div>
-</nav> -->

@@ -2,15 +2,42 @@
   background-color: $backgoundCard3Blocco;
 }
 
-.cartArtist {
+.cartArtistMain {
   font-size: 2em;
 }
 
-.cartArtist h5 {
+.cartArtistMain h5 {
   font-size: 2em !important;
 }
 
-.cartArtist i {
+.cartArtistMain i {
   color: $blueLigh;
   padding-right: 0.3em;
+}
+
+body {
+  counter-reset: section;
+}
+// conta da solo il numero della canzone
+// .cardArtistSongs::before {
+//   counter-increment: section;
+//   content: counter(section);
+//   color: $textSoftGray;
+// }
+.cardArtistSongs p,
+.cardArtistSongs h2 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.cardArtistSongs p {
+  color: $textSoftGray;
+}
+
+.cardYouLike {
+  font-size: 1.5em;
+}
+.cardYouLike p:last-of-type {
+  color: $textSoftGray;
+  font-size: 0.8em;
 }
