@@ -1,0 +1,24 @@
+footer {
+  font-family: "CircularStd-Light";
+  font-size: 0.8em;
+}
+
+footer .row {
+  padding-bottom: 0.8em;
+}
+
+footer i {
+  padding: 0 0.3em;
+  font-size: larger;
+}
+
+footer .mainRow a {
+  text-decoration: none;
+  color: $textWhite;
+  font-weight: bold;
+}
+footer .secondRow a,
+footer p {
+  text-decoration-line: none;
+  color: $textSoftGray;
+}

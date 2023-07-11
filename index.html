@@ -31,7 +31,7 @@
   </style>
   <body class="container-fluid">
     <div class="row">
-      <div id="nab1" class="col col-3">
+      <div class="col col-3">
         <!-- qui dentro andrà la navbar di sinistra -->
         <!--==================================================================-->
         <div class="container-fluid">
@@ -159,7 +159,7 @@
 
               <div class="dropdown">
                 <button
-                  class="btn btn-dark dropdown-toggle"
+                  class="btn btn-trasparent dropdown-toggle"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -183,7 +183,7 @@
             </div>
           </nav>
           <!-- Primo blocco canzone con carosello-->
-          <div class="container w-100 d-none p-0 d-md-block">
+          <div class="container w-100 d-none mt-5 p-0 d-md-block">
             <div id="carouselExample" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -427,7 +427,6 @@
                   <div class="col col-8">
                     <p class="m-0">Titolo album</p>
                   </div>
-                  <div class="col col-8"></div>
                 </div>
               </div>
               <!-- singola card -->
@@ -447,7 +446,6 @@
                   <div class="col col-8">
                     <p class="m-0">Titolo album</p>
                   </div>
-                  <div class="col col-8"></div>
                 </div>
               </div>
               <!-- singola card -->
@@ -467,7 +465,6 @@
                   <div class="col col-8">
                     <p class="m-0">Titolo album</p>
                   </div>
-                  <div class="col col-8"></div>
                 </div>
               </div>
               <!-- singola card -->
@@ -487,7 +484,6 @@
                   <div class="col col-8">
                     <p class="m-0">Titolo album</p>
                   </div>
-                  <div class="col col-8"></div>
                 </div>
               </div>
               <!-- singola card -->
@@ -507,7 +503,6 @@
                   <div class="col col-8">
                     <p class="m-0">Titolo album</p>
                   </div>
-                  <div class="col col-8"></div>
                 </div>
               </div>
               <!-- singola card -->
@@ -527,7 +522,6 @@
                   <div class="col col-8">
                     <p class="m-0">Titolo album</p>
                   </div>
-                  <div class="col col-8"></div>
                 </div>
               </div>
             </div>
@@ -781,9 +775,9 @@
             </div>
           </div>
         </main>
+        <!-- Footer -->
         <footer>
-          <!-- TODO Footer -->
-          <div class="row mainRow row-cols-4">
+          <div class="row mainRow row-cols-4 mt-5">
             <div class="col">
               <a href="">Azienda</a>
             </div>
@@ -793,10 +787,16 @@
             <div class="col">
               <a href="">Link utili</a>
             </div>
-            <div class="col">
-              <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
-              <i class="fa-brands fa-twitter" style="color: #ffffff"></i>
-              <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
+            <div class="col text-end">
+              <a href="https://www.instagram.com/spotify/">
+                <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
+              </a>
+              <a href="https://twitter.com/SpotifyItaly">
+                <i class="fa-brands fa-twitter" style="color: #ffffff"></i>
+              </a>
+              <a href="https://www.facebook.com/Spotify">
+                <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
+              </a>
             </div>
           </div>
           <div class="row secondRow row-cols-4">
@@ -875,7 +875,188 @@
         </footer>
       </div>
       <!-- qui dentro andrà la navbar di destra -->
-      <div class="col col-3"></div>
+      <div class="col col-2 bg-black">
+        <div class="container w-100 p-0 sticky-top">
+          <nav
+            id="navBarSx"
+            class="navbar navbar-expand-xl bg-black"
+            data-bs-theme="dark"
+          >
+            <div class="container-fluid p-0">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse justify-content-between"
+                id="navbarSupportedContent"
+              >
+                <div class="nav-item">
+                  <a href="#" class="text-white text-decoration-none"
+                    >Attività amici</a
+                  >
+                </div>
+                <div class="nav-item">
+                  <div>
+                    <a href=""
+                      ><i
+                        class="fa-solid fa-user-plus pe-2"
+                        style="color: #ffffff"
+                      ></i
+                    ></a>
+                    <a href=""
+                      ><i class="fa-solid fa-x pe-2" style="color: #ffffff"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- cards della nav bad destra -->
+          <!-- Singola card -->
+          <div class="col cardNavbarDx">
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-7 pe-0">
+                <p id="artistName" class="m-0">Nome artista</p>
+                <p class="m-0">Titolo canzone</p>
+              </div>
+
+              <div class="col col-2 p-0">
+                <p>durata</p>
+              </div>
+            </div>
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0"></div>
+              <div class="col col-7">
+                <p class="m-0">Titolo album</p>
+              </div>
+            </div>
+          </div>
+          <!-- Singola card -->
+          <div class="col cardNavbarDx">
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-7 pe-0">
+                <p id="artistName" class="m-0">Nome artista</p>
+                <p class="m-0">Titolo canzone</p>
+              </div>
+
+              <div class="col col-2 p-0">
+                <p>durata</p>
+              </div>
+            </div>
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0"></div>
+              <div class="col col-7">
+                <p class="m-0">Titolo album</p>
+              </div>
+            </div>
+          </div>
+          <!-- Singola card -->
+          <div class="col cardNavbarDx">
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-7 pe-0">
+                <p id="artistName" class="m-0">Nome artista</p>
+                <p class="m-0">Titolo canzone</p>
+              </div>
+
+              <div class="col col-2 p-0">
+                <p>durata</p>
+              </div>
+            </div>
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0"></div>
+              <div class="col col-7">
+                <p class="m-0">Titolo album</p>
+              </div>
+            </div>
+          </div>
+          <!-- Singola card -->
+          <div class="col cardNavbarDx">
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-7 pe-0">
+                <p id="artistName" class="m-0">Nome artista</p>
+                <p class="m-0">Titolo canzone</p>
+              </div>
+
+              <div class="col col-2 p-0">
+                <p>durata</p>
+              </div>
+            </div>
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0"></div>
+              <div class="col col-7">
+                <p class="m-0">Titolo album</p>
+              </div>
+            </div>
+          </div>
+          <!-- Singola card -->
+          <div class="col cardNavbarDx">
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-7 pe-0">
+                <p id="artistName" class="m-0">Nome artista</p>
+                <p class="m-0">Titolo canzone</p>
+              </div>
+
+              <div class="col col-2 p-0">
+                <p>durata</p>
+              </div>
+            </div>
+            <div class="row align-items-center p-0 m-0">
+              <div class="col col-2 p-0"></div>
+              <div class="col col-7">
+                <p class="m-0">Titolo album</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="playerContainer">
       <!-- TODO player -->
