@@ -22,7 +22,10 @@ form.addEventListener("submit", function (e) {
       //ciclo array data, pesco gli album e lizeppo dentro l'array
       console.log(data.data[0].artist.name.toLowerCase());
       console.log(input.toLowerCase());
-      if (data.data[0].artist.name.toLowerCase() === input.toLowerCase()) {
+      if (
+        data.data[0].artist.name.toLowerCase() === input.toLowerCase() &&
+        data.data[1].artist.name.toLowerCase() === input.toLowerCase()
+      ) {
         const artistaConFoto = document.createElement("div");
         console.log("m");
         artistaConFoto.innerHTML = `
@@ -36,6 +39,23 @@ form.addEventListener("submit", function (e) {
         let artist = document.getElementById("artist");
         artist.addEventListener("click", function () {
           window.location.assign(`artist.html?id=${data.data[0].artist.id}`);
+        });
+      } else if (
+        data.data[1].artist.name.toLowerCase() === input.toLowerCase()
+      ) {
+        const artistaConFoto = document.createElement("div");
+        console.log("m");
+        artistaConFoto.innerHTML = `
+      <div class="m-1 border rounded-circle " id= "artist">
+      <img src="${data.data[1].artist.picture_medium}" class="w-100" \>
+      </div>
+      <div> <h4> ${data.data[1].artist.name} </h4>
+      <p> ${data.data[1].artist.type}</p> </div>
+      `;
+        contenitoreRicerca.appendChild(artistaConFoto);
+        let artist = document.getElementById("artist");
+        artist.addEventListener("click", function () {
+          window.location.assign(`artist.html?id=${data.data[2].artist.id}`);
         });
       }
       // ora collegiamo foto artista a pagina artista
