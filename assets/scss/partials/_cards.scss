@@ -1,3 +1,16 @@
 #card2Container .card {
   background-color: $backgoundCard3Blocco;
 }
+
+.cartArtist {
+  font-size: 2em;
+}
+
+.cartArtist h5 {
+  font-size: 2em !important;
+}
+
+.cartArtist i {
+  color: $blueLigh;
+  padding-right: 0.3em;
+}
