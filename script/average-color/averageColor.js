@@ -58,7 +58,7 @@ const pad = function (hex) {
 
 const start = function () {
   // prendo il riferimento all'immagine del dom
-  let imgReference = document.querySelectorAll("img");
+  let imgReference = document.querySelectorAll(".paperino");
 
   imgReference.forEach((immagine) => {
     // creo il context 2d dell'immagine selezionata
