@@ -76,3 +76,7 @@ const popolaPlaylist = async function () {
   }
 };
 popolaPlaylist();
+const search = document.getElementById("search");
+search.addEventListener("click", function () {
+  window.location.assign("search_static.html");
+});
