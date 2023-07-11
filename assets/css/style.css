@@ -33,9 +33,13 @@
   src: url("../fonts/CircularStd-MediumItalic.otf") format("opentype");
 }
 body {
-  background-color: #161616;
+  background-color: #121212;
   color: white;
   font-family: "CircularStd-Black";
+}
+
+h2 {
+  font-size: 1.4em;
 }
 
 #sideBar {
@@ -64,6 +68,14 @@ body {
   margin: 0.3em;
 }
 
+.card-body p {
+  font-size: 0.6em;
+}
+
+.card-body p:nth-last-of-type(1) {
+  color: #535353;
+}
+
 .carousel-item p {
   font-size: 0.6em;
 }
@@ -75,4 +87,8 @@ body {
 .carousel-item .text-end p {
   font-size: 0.6em;
   color: #535353;
+}
+
+#card2Container .card {
+  background-color: #181818;
 }/*# sourceMappingURL=style.css.map */
