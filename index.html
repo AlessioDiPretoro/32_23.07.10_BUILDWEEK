@@ -66,7 +66,7 @@
           </div>
         </div>
       </div>
-      <div class="col col-8">
+      <div class="col col-7">
         <main>
           <!-- qui dentro andrà il Main -->
           <!-- nav bar con freccie e profilo -->
@@ -633,9 +633,9 @@
             </div>
           </div>
         </main>
+        <!-- Footer -->
         <footer>
-          <!-- TODO Footer -->
-          <div class="row mainRow row-cols-4">
+          <div class="row mainRow row-cols-4 mt-5">
             <div class="col">
               <a href="">Azienda</a>
             </div>
@@ -645,10 +645,16 @@
             <div class="col">
               <a href="">Link utili</a>
             </div>
-            <div class="col">
-              <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
-              <i class="fa-brands fa-twitter" style="color: #ffffff"></i>
-              <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
+            <div class="col text-end">
+              <a href="https://www.instagram.com/spotify/">
+                <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
+              </a>
+              <a href="https://twitter.com/SpotifyItaly">
+                <i class="fa-brands fa-twitter" style="color: #ffffff"></i>
+              </a>
+              <a href="https://www.facebook.com/Spotify">
+                <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
+              </a>
             </div>
           </div>
           <div class="row secondRow row-cols-4">
@@ -727,7 +733,59 @@
         </footer>
       </div>
       <!-- qui dentro andrà la navbar di destra -->
-      <div class="col col-3"></div>
+      <div class="col col-2 p-0 fs-6 bg-black">
+        <div class="container w-100 sticky-top">
+          <nav id="navBarSx" class="navbar navbar-expand-xl bg-black" data-bs-theme="dark">
+            <div class="container-fluid p-0">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse justify-content-between"
+                id="navbarSupportedContent"
+              >
+                <div class="nav-item">
+                  <a href="#" class="text-white text-decoration-none">Attività amici</a>
+                </div>
+                <div class="nav-item">
+                  <div>
+                    <a href=""><i class="fa-solid fa-user-plus pe-2" style="color: #ffffff"></i></a>
+                    <a href=""><i class="fa-solid fa-x pe-2" style="color: #ffffff"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- cards della nav bad destra -->
+          <!-- Singola card -->
+          <!-- singola card -->
+          <div class="col playlist">
+            <div class="row align-items-center rounded-2 p-0 m-0" style="background-color: #2d2d2d">
+              <div class="col col-3 p-0">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  class="rounded-circle"
+                  alt="AlbumPhoto"
+                  width="100%"
+                />
+              </div>
+              <div class="col col-6">
+                <p class="m-0">Titolo album</p>
+              </div>
+              <!-- <div class="col col-8"></div>  cancellare da altro codice-->
+              <div class="col col-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="playerContainer">
       <!-- TODO player -->
