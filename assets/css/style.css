@@ -91,4 +91,30 @@ h2 {
 
 #card2Container .card {
   background-color: #181818;
+}
+
+footer {
+  font-family: "CircularStd-Light";
+  font-size: 0.8em;
+}
+
+footer .row {
+  padding-bottom: 0.8em;
+}
+
+footer i {
+  padding: 0 1em;
+  font-size: larger;
+}
+
+footer .mainRow a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+footer .secondRow a,
+footer p {
+  text-decoration-line: none;
+  color: #535353;
 }/*# sourceMappingURL=style.css.map */
