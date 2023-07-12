@@ -58,7 +58,7 @@ const pad = function (hex) {
 
 const start = function () {
   // prendo il riferimento all'immagine del dom
-  let imgReference = document.querySelectorAll(".paperino");
+  let imgReference = document.querySelectorAll(".cardSearch");
 
   imgReference.forEach((immagine) => {
     // creo il context 2d dell'immagine selezionata
@@ -75,8 +75,7 @@ const start = function () {
 
     // console.log del risultato
     console.log(mostRecurrentHex);
-    immagine.parentElement.style.backgroundColor =
-      "#" + mostRecurrentHex + "99";
+    immagine.parentElement.style.backgroundColor = "#" + mostRecurrentHex + "99";
   });
 };
 
