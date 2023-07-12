@@ -43,9 +43,30 @@ const artist = async function () {
       div.classList.add("my-md-4");
       let visual = album.data[i].rank;
       let string = visual.toString();
-      string.split("");
-      console.log(string.split(""));
+      let arr = string.split("");
+      let arr1 = [];
+      let arr2 = [];
+      arr.forEach((e, n) => {
+        if (n < 3) {
+          arr1.push(e);
+        } else {
+          arr2.push(e);
+        }
+      });
+      console.log(arr1);
+      console.log(arr2);
+      let string1 = arr1.join("");
+      let string2 = arr2.join("");
       console.log(div);
+
+      let duration = album.data[i].duration / 60;
+      let minute = Math.floor(duration);
+      let second = album.data[i].duration - minute * 60;
+
+      if (second < 10) {
+        second = `0${second}`;
+      }
+
       div.innerHTML = `  
         <div class="col col-1">${i + 1}</div>
 
@@ -56,12 +77,12 @@ const artist = async function () {
             <h2>${album.data[i].title}</h2>
           </div>
           <div class="">
-            <p>n°${album.data[i].rank} visualizzazioni</p>
+            <p> ${string1}<span>.</span>${string2} ascolti</p>
           </div>
           <div></div>
         </div>
         <div class="col col-2">
-          <p class="d-none d-md-flex">durata</p>
+          <p class="d-none d-md-flex">${minute}:${second} durata</p>
           <p class="d-md-none">
             <i class="fa-solid fa-ellipsis-vertical"></i>
           </p>
