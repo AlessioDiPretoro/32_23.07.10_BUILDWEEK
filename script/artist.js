@@ -7,6 +7,7 @@ const artist = async function () {
     let response = await fetch(url1);
     let artist = await response.json();
     let artistName = document.getElementById("artist");
+
     artistName.innerHTML = `        
 <div class="cartArtistMain card text-bg-dark" style="height: 400px">
 <img
@@ -32,12 +33,15 @@ const artist = async function () {
     console.log(braniArtistaPopolari);
     for (let i = 0; i < 3; i++) {
       let div = document.createElement("div");
-      div.classList.add("cardArtistSongs");
-      div.classList.add("d-flex");
-      div.classList.add("align-items-center");
-      div.classList.add("justify-content-evenly");
-      div.classList.add("my-3");
-      div.classList.add("my-md-4");
+      div.classList.add(
+        "cardArtistSongs",
+        "d-flex",
+        "align-items-center",
+        "justify-content-evenly",
+        "my-3",
+        "my-md-4"
+      );
+
       let visual = album.data[i].rank;
       let string = visual.toString();
       let arr = string.split("");
