@@ -1,4 +1,5 @@
 .cardSearch {
+  user-select: none;
   position: absolute;
   height: 65px;
   bottom: -5px;
@@ -14,10 +15,18 @@
 }
 #albumContainer .col {
   height: 80px;
+  user-select: none;
+  cursor: pointer;
+  &:hover{  transform: scale(1.01)};
 }
 #search {
   margin: 10px;
   font-size: 0.8em;
+  cursor: pointer;
 }
 .artist{width: 100px;}
 .fontSearch{font-size: 1.3em;}
+#contenitoreRicerca .d-flex{  user-select: none;
+  cursor: pointer;
+  &:hover{  transform: scale(1.01)};}
+  
