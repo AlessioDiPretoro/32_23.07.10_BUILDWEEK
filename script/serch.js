@@ -101,12 +101,7 @@ if (id) {
         ) {
           const artistaConFoto = document.createElement("div");
           console.log("m");
-          artistaConFoto.classList.add(
-            "d-flex",
-            "align-items-center",
-            "mt-3",
-            "pluto"
-          );
+          artistaConFoto.classList.add("d-flex", "align-items-center", "mt-3");
           artistaConFoto.innerHTML = `
         <div class="m-1 artist" " id= "artist">
         <img src="${data.data[1].artist.picture_medium}" class="w-100 rounded-circle" \>
@@ -149,14 +144,6 @@ if (id) {
       <p class="m-0"> ${dato.type}</p> </div>
       `;
           contenitoreRicerca.appendChild(canzoniConFoto);
-        });
-        let cardAlbum = document.querySelectorAll(".pluto");
-        console.log(cardAlbum);
-        cardAlbum.forEach((e, n) => {
-          e.addEventListener("click", function () {
-            console.log("e");
-            window.location.assign(`album.html?id=${data.data[n].album.id}`);
-          });
         });
         console.log(arrayAlbum);
       } catch (a) {
