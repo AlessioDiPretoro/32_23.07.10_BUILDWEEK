@@ -26,7 +26,9 @@
       <div class="col col-12 col-md-2">
         <div class="container-fluid">
           <div class="row">
-            <div class="flex-column fd- col-auto align-items-center bg-dark min-vh-100">
+            <div
+              class="flex-column fd- col-auto align-items-center bg-dark min-vh-100"
+            >
               <!--Inizio navtop-->
               <div>
                 <a
@@ -37,7 +39,10 @@
                 <ul class="nav nav-pills flex-column mt-2 mt-sm-o" id="menu">
                   <li class="nav-item">
                     <a href="#" class="nav-link text-white">
-                      <i id="iconsNav" class="bi bi-house-door-fill ms-3 text-white"></i>
+                      <i
+                        id="iconsNav"
+                        class="bi bi-house-door-fill ms-3 text-white"
+                      ></i>
                       <span class="ms-2">Home</span>
                     </a>
                   </li>
@@ -56,7 +61,10 @@
               <div>
                 <div class="nav nav-pills flex-column mt-2 mt-sm-o">
                   <a href="#" class="nav-link text-white">
-                    <i id="iconsNav" class="bi bi bi-collection ms-3 text-white"></i>
+                    <i
+                      id="iconsNav"
+                      class="bi bi bi-collection ms-3 text-white"
+                    ></i>
                     <span class="ms-2">La tua Libreria</span>
                   </a>
                 </div>
@@ -81,7 +89,10 @@
                   data-bs-target="#carouselExample"
                   data-bs-slide="prev"
                 >
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
                 <button
@@ -90,7 +101,10 @@
                   data-bs-target="#carouselExample"
                   data-bs-slide="next"
                 >
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
@@ -121,34 +135,23 @@
             </div>
           </nav>
           <!-- Primo blocco canzone -->
-          <div class="container w-100 p-0">
-            <div class="cartArtistMain card text-bg-dark" style="height: 400px">
-              <img
-                src="./assets/imgs/main/image-2.jpg"
-                class="card-img"
-                style="height: 400px"
-                alt="..."
-              />
-              <div class="card-img-overlay" style="top: auto">
-                <p class="card-text">
-                  <i class="fa-solid fa-circle-check"></i><small>Artista verificato</small>
-                </p>
-                <h5 class="card-title fs-1">Nome Artista</h5>
-                <p class="card-text">n°3450546 Ascoltatori mensili</p>
-              </div>
-            </div>
-          </div>
+          <div class="container w-100 p-0" id="artist"></div>
           <!-- Blocco menù -->
           <div class="container w-100 p-0">
             <!-- menù player mobile -->
-            <div class="d-flex align-items-center justify-content-between my-3 d-md-none">
+            <div
+              class="d-flex align-items-center justify-content-between my-3 d-md-none"
+            >
               <div class="d-flex align-items-center">
                 <button type="button" class="btn btn-dark mx-3">Seguimi</button>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </div>
               <div class="d-flex align-items-center">
                 <a href="">
-                  <i class="fa-solid fa-arrows-turn-right fs-1" style="color: #00ff00"></i>
+                  <i
+                    class="fa-solid fa-arrows-turn-right fs-1"
+                    style="color: #00ff00"
+                  ></i>
                 </a>
 
                 <a href="">
@@ -161,10 +164,15 @@
             </div>
             <!-- menù player desktop -->
             <div class="d-flex align-items-center d-none d-md-flex">
-              <i class="fa-solid fa-circle-play fs-1 mx-3" style="color: #00ff00"></i>
+              <i
+                class="fa-solid fa-circle-play fs-1 mx-3"
+                style="color: #00ff00"
+              ></i>
               <div class="d-flex align-items-center my-4">
                 <div>
-                  <button type="button" class="btn btn-dark border m-1">FOLLOWING</button>
+                  <button type="button" class="btn btn-dark border m-1">
+                    FOLLOWING
+                  </button>
                 </div>
                 <div>
                   <button type="button" class="btn btn-dark m-1">...</button>
@@ -180,81 +188,7 @@
               <!-- contenitore delle canzoni -->
               <div class="col col-12 col-md-7 flex-grow-1">
                 <!-- per ogni riga creare questa class row -->
-                <div class="row p-0">
-                  <div class="col"></div>
-                  <!-- card singola traccia -->
-                  <div
-                    class="cardArtistSongs d-flex align-items-center justify-content-evenly my-3 my-md-4"
-                  >
-                    <div class="col col-1">1</div>
-
-                    <div
-                      class="col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
-                    >
-                      <div class="">
-                        <h2>Titolo</h2>
-                      </div>
-                      <div class="">
-                        <p>n° visualizzazioni</p>
-                      </div>
-                      <div></div>
-                    </div>
-                    <div class="col col-2">
-                      <p class="d-none d-md-flex">durata</p>
-                      <p class="d-md-none"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row p-0">
-                  <div class="col"></div>
-                  <!-- card singola traccia -->
-                  <div
-                    class="cardArtistSongs d-flex align-items-center justify-content-evenly my-3 my-md-4"
-                  >
-                    <div class="col col-1">1</div>
-
-                    <div
-                      class="col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
-                    >
-                      <div class="">
-                        <h2>Titolo</h2>
-                      </div>
-                      <div class="">
-                        <p>n° visualizzazioni</p>
-                      </div>
-                      <div></div>
-                    </div>
-                    <div class="col col-2">
-                      <p class="d-none d-md-flex">durata</p>
-                      <p class="d-md-none"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row p-0">
-                  <div class="col"></div>
-                  <!-- card singola traccia -->
-                  <div
-                    class="cardArtistSongs d-flex align-items-center justify-content-evenly my-3 my-md-4"
-                  >
-                    <div class="col col-1">1</div>
-
-                    <div
-                      class="col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
-                    >
-                      <div class="">
-                        <h2>Titolo</h2>
-                      </div>
-                      <div class="">
-                        <p>n° visualizzazioni</p>
-                      </div>
-                      <div></div>
-                    </div>
-                    <div class="col col-2">
-                      <p class="d-none d-md-flex">durata</p>
-                      <p class="d-md-none"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                    </div>
-                  </div>
-                </div>
+                <div class="row p-0" id="braniArtistaPopolari"></div>
               </div>
 
               <div class="col col-12 col-md-5">
@@ -271,8 +205,12 @@
                       />
                     </div>
                     <div class="col col-10 pe-0">
-                      <p id="artistName" class="d-none d-md-block m-0">Nome artista</p>
-                      <p id="artistName" class="d-md-none m-0">Brani che ti piacciono</p>
+                      <p id="artistName" class="d-none d-md-block m-0">
+                        Nome artista
+                      </p>
+                      <p id="artistName" class="d-md-none m-0">
+                        Brani che ti piacciono
+                      </p>
                       <p class="m-0">Titolo canzone</p>
                     </div>
                   </div>
@@ -390,7 +328,11 @@
       <!-- qui dentro andrà la navbar di destra -->
       <div class="col col-2 bg-black d-none d-md-block">
         <div class="container w-100 p-0 sticky-top">
-          <nav id="navBarSx" class="navbar navbar-expand-xl bg-black" data-bs-theme="dark">
+          <nav
+            id="navBarSx"
+            class="navbar navbar-expand-xl bg-black"
+            data-bs-theme="dark"
+          >
             <div class="container-fluid p-0">
               <button
                 class="navbar-toggler"
@@ -409,14 +351,24 @@
               >
                 <div class="w-100 d-flex justify-content-between">
                   <div class="nav-item">
-                    <a href="#" class="text-white text-decoration-none">Attività amici</a>
+                    <a href="#" class="text-white text-decoration-none"
+                      >Attività amici</a
+                    >
                   </div>
                   <div class="nav-item">
                     <div>
                       <a href=""
-                        ><i class="fa-solid fa-user-plus pe-2" style="color: #ffffff"></i
+                        ><i
+                          class="fa-solid fa-user-plus pe-2"
+                          style="color: #ffffff"
+                        ></i
                       ></a>
-                      <a href=""><i class="fa-solid fa-x pe-2" style="color: #ffffff"></i></a>
+                      <a href=""
+                        ><i
+                          class="fa-solid fa-x pe-2"
+                          style="color: #ffffff"
+                        ></i
+                      ></a>
                     </div>
                   </div>
                 </div>
@@ -546,6 +498,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script src="script/artist.js"></script>
     <!-- TODO collegare script corretto -->
   </body>
 </html>
