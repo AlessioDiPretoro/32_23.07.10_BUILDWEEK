@@ -11,7 +11,7 @@ const artist = async function () {
     artistName.innerHTML = `        
 <div class="cartArtistMain card text-bg-dark" style="height: 400px">
 <img
-  src="${artist.picture_xl}"
+  src="${artist.picture_big}"
   class="card-img"
   style="height: 400px"
   alt="${artist.name} foto"

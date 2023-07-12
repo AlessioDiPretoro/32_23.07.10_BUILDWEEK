@@ -1,6 +1,6 @@
 let url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 const form = document.getElementById("search");
-let body = document.querySelector("body");
+let body = document.getElementById("contenitoreRicercaAlbum");
 
 console.log(body);
 const addressUrl = new URLSearchParams(location.search);
@@ -90,9 +90,7 @@ if (id) {
           artist.addEventListener("click", function () {
             window.location.assign(`artist.html?id=${data.data[0].artist.id}`);
           });
-        } else if (
-          data.data[1].artist.name.toLowerCase() === input.toLowerCase()
-        ) {
+        } else if (data.data[1].artist.name.toLowerCase() === input.toLowerCase()) {
           const artistaConFoto = document.createElement("div");
           console.log("m");
           artistaConFoto.classList.add("d-flex", "align-items-center", "mt-3");
