@@ -1,8 +1,6 @@
 let url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 const form = document.getElementById("search");
-let body = document.querySelector("body");
-
-console.log(body);
+let div = document.getElementById("contenitoreRicercaAlbum");
 const addressUrl = new URLSearchParams(location.search);
 const id = addressUrl.get("id");
 console.log(id);
@@ -38,10 +36,10 @@ if (id) {
         <div class="m-2"> <h4 class="fontSearch align-items-center"> ${dato.album.title} </h4>
         <p class="m-0"> ${dato.album.type}</p> </div>
         `;
-
-          body.appendChild(albumConFoto);
+          div.appendChild(albumConFoto);
         }
       });
+
       console.log(arrayAlbum);
     } catch (a) {
       console.log(a);
