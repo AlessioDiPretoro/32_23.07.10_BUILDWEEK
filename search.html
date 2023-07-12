@@ -186,14 +186,14 @@
                 </svg>
               </div>
               <div>
-                <a href="#" class="nav-link p-0">
+                <a href="./index.html" class="nav-link p-0">
                   <i id="iconsNav" class="bi bi-house-door-fill"></i>
                   <span>Home</span>
                 </a>
               </div>
-              <div id="searchNavBarSx">
+              <div>
                 <a
-                  href="#"
+                  href="./search_static.html"
                   class="nav-link link-offset-2 link-underline link-underline-opacity-100 p-0"
                 >
                   <i id="iconsNav" class="bi bi-search"></i>
@@ -201,7 +201,7 @@
                 </a>
               </div>
               <div>
-                <a href="#" class="nav-link">
+                <a href="./playlist.html" class="nav-link">
                   <i id="iconsNav" class="bi bi bi-collection"></i>
                   <span>La tua Libreria</span>
                 </a>
@@ -213,21 +213,11 @@
           <nav class="navbar bg-transparent" data-bs-theme="dark">
             <div class="container-fluid">
               <div class="position-relative w-50 d-flex">
-                <button
-                  class="carousel-control-prev position-static"
-                  type="button"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide="prev"
-                >
+                <button class="carousel-control-prev position-static prevPage" type="button">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <button
-                  class="carousel-control-next position-static"
-                  type="button"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide="next"
-                >
+                <button class="carousel-control-prev position-static next-page" type="button">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
@@ -394,7 +384,9 @@
                       <a href=""
                         ><i class="fa-solid fa-user-plus pe-2" style="color: #ffffff"></i
                       ></a>
-                      <a href=""><i class="fa-solid fa-x pe-2" style="color: #ffffff"></i></a>
+                      <a href=""
+                        ><i class="navBarDxClose fa-solid fa-x pe-2" style="color: #ffffff"></i
+                      ></a>
                     </div>
                   </div>
                 </div>
@@ -615,6 +607,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="script/serch.js"></script>
+    <script src="script/navsController.js"></script>
     <!-- <script src="./script/script.js"></script> -->
   </body>
 </html>
