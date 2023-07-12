@@ -1,4 +1,5 @@
 .cardSearch {
+ 
   user-select: none;
   position: absolute;
   height: 65px;
@@ -20,13 +21,20 @@
   &:hover{  transform: scale(1.01)};
 }
 #search {
+  text-align: center;
   margin: 10px;
   font-size: 0.8em;
   cursor: pointer;
+input{ background-color: lighten($backgoundGreyBody, 10); color: white;
+;font-size: 1rem;}
+button{width: 100px; font-size: 1rem; border: 0; background-color: white;}
 }
 .artist{width: 100px;}
 .fontSearch{font-size: 1.3em;}
-#contenitoreRicerca .d-flex{  user-select: none;
+#contenitoreRicerca{ 
+  .d-flex{ 
+width: 300px;
+   user-select: none;
   cursor: pointer;
-  &:hover{  transform: scale(1.01)};}
+  &:hover{  transform: scale(1.01)};}}
   
