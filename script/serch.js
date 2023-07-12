@@ -30,10 +30,10 @@ form.addEventListener("submit", function (e) {
         console.log(artistaConFoto);
         console.log("m");
         artistaConFoto.innerHTML = `
-        <div class="m-1 border rounded-2 artist" id= "artist">
-        <img src="${data.data[0].artist.picture_medium}" class="w-100" \>
+        <div class="m-1 artist" id= "artist">
+        <img src="${data.data[0].artist.picture_medium}" class="w-100 rounded-circle " \>
         </div>
-        <div> <h4 class="fontSearch"  > ${data.data[0].artist.name} </h4>
+        <div class="m-2"> <h4 class="fontSearch"  > ${data.data[0].artist.name} </h4>
         <p class="m-0"> ${data.data[0].artist.type}</p> </div>
         `;
         contenitoreRicerca.appendChild(artistaConFoto);
