@@ -1,0 +1,20 @@
+.cardSearch {
+  position: absolute;
+  height: 65px;
+  bottom: -5px;
+  right: -10px;
+  rotate: 25deg;
+  margin: -75px 0 0 -100px;
+  border-radius: 10px;
+}
+#albumContainer .rounded-1 {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+}
+#albumContainer .col {
+  height: 80px;
+}
+#search {
+  margin: 10px;
+}
