@@ -1017,11 +1017,11 @@
         </div>
       </div>
     </div>
-    <div id="playerContainer" class="row sticky-bottom justify-content-between">
+    <div id="playerContainer" class="row sticky-bottom justify-content-between align-items-center">
       <!-- TODO player -->
       <div class="col col-2">
         <!-- Singola card -->
-        <div class="col cardNavbarDx">
+        <div class="col cardNavbarDx p-2">
           <div class="row align-items-center p-0 m-0">
             <div class="col col-2 p-0">
               <img
@@ -1032,7 +1032,7 @@
               />
             </div>
             <div class="col col-7 pe-0">
-              <p id="artistName" class="m-0">Nome artista</p>
+              <p class="artistName m-0">Nome artista</p>
               <p class="m-0">Titolo canzone</p>
             </div>
 
@@ -1042,7 +1042,50 @@
           </div>
         </div>
       </div>
-      <div class="col col-8 text-center">PLAYER TODO</div>
+      <!-- player audio -->
+      <div class="col col-8 d-flex justify-content-center">
+        <div class="player">
+          <ul class="buttons">
+            <a href="" class="button button-sm">
+              <i class="fas fa-random fa-sm" aria-hidden="true"></i>
+              <span class="sr-only">Shuffle</span>
+            </a>
+            <a href="" class="button button-md">
+              <i class="fas fa-step-backward" aria-hidden="true"></i>
+              <span class="sr-only">Previous Music</span>
+            </a>
+            <a href="" class="button button-lg">
+              <i class="fas fa-stop fa-lg" aria-hidden="true" aria-hidden="true"></i>
+              <!-- al clicj cambia classe in fa-pause opp fa-stop -->
+              <span class="sr-only">Pause</span>
+            </a>
+            <a href="" class="button button-md">
+              <i class="fas fa-step-forward"></i>
+              <span class="sr-only">Next Music</span>
+            </a>
+            <a href="" class="button button-sm">
+              <i class="fas fa-circle-notch fa-sm" aria-hidden="true"></i>
+              <span class="sr-only">Repeat Song</span>
+            </a>
+          </ul>
+          <!--  buttons  -->
+          <div class="prog">
+            <div class="prog-time d-flex align-items-center">
+              <p class="left">0:00</p>
+              <div class="prog-bar mx-2">
+                <div class="prog-bar-inner"></div>
+              </div>
+              <p class="right">2:06</p>
+            </div>
+          </div>
+          <!--  progress  -->
+        </div>
+        <script src="https://kit.fontawesome.com/7d35781f0a.js" crossorigin="anonymous"></script>
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+          rel="stylesheet"
+        />
+      </div>
       <div class="col col-2 text-end">OPTIONS TODO</div>
     </div>
     <script
