@@ -35,13 +35,13 @@
   color: $textSoftGray;
 }
 
-.player {
+#playerContainer .player {
   width: 80%;
-  max-width: 275px;
-  margin: 2rem auto;
   position: relative;
-  ul a:nth-child(3) {
-    font-size: 1.5em;
+  @media screen and (min-width: 767px) {
+    ul a:nth-child(3) {
+      font-size: 1.5em;
+    }
   }
 }
 
