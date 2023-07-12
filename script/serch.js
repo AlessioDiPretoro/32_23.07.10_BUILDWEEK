@@ -3,15 +3,12 @@ const form = document.getElementById("search");
 let div = document.getElementById("contenitoreRicercaAlbum");
 const addressUrl = new URLSearchParams(location.search);
 const id = addressUrl.get("id");
-console.log(id);
-console.log(form);
-
 if (id) {
   form.classList.add("d-none");
   const serch1 = async function () {
     try {
       let response = await fetch(url + id);
-      console.log(response);
+
       let data = await response.json();
       console.log(data);
       // console.log(data.data[0]);
@@ -19,16 +16,21 @@ if (id) {
       //creo array vuoto da popolare con album
       let arrayAlbum = [];
       //ciclo array data, pesco gli album e lizeppo dentro l'array
-      console.log(data.data[1].artist.name.toLowerCase());
+
       // ora collegiamo foto artista a pagina artista
       data.data.forEach((dato) => {
         if (!arrayAlbum.includes(dato.album.title)) {
           let titolo = dato.album.title;
-          console.log(titolo);
+
           arrayAlbum.push(titolo);
           //creiamo i contenitori per gli album
           const albumConFoto = document.createElement("div");
-          albumConFoto.classList.add("d-flex", "align-items-center", "mt-3");
+          albumConFoto.classList.add(
+            "d-flex",
+            "align-items-center",
+            "mt-3",
+            "pluto"
+          );
           albumConFoto.innerHTML = `
         <div class="m-1">
         <img class="artist" src="${dato.album.cover_small}" \>
@@ -39,8 +41,14 @@ if (id) {
           div.appendChild(albumConFoto);
         }
       });
-
-      console.log(arrayAlbum);
+      let cardAlbum = document.querySelectorAll(".pluto");
+      console.log(cardAlbum);
+      cardAlbum.forEach((e, n) => {
+        e.addEventListener("click", function () {
+          console.log("e");
+          window.location.assign(`album.html?id=${data.data[n].album.id}`);
+        });
+      });
     } catch (a) {
       console.log(a);
     }
@@ -88,10 +96,17 @@ if (id) {
           artist.addEventListener("click", function () {
             window.location.assign(`artist.html?id=${data.data[0].artist.id}`);
           });
-        } else if (data.data[1].artist.name.toLowerCase() === input.toLowerCase()) {
+        } else if (
+          data.data[1].artist.name.toLowerCase() === input.toLowerCase()
+        ) {
           const artistaConFoto = document.createElement("div");
           console.log("m");
-          artistaConFoto.classList.add("d-flex", "align-items-center", "mt-3");
+          artistaConFoto.classList.add(
+            "d-flex",
+            "align-items-center",
+            "mt-3",
+            "pluto"
+          );
           artistaConFoto.innerHTML = `
         <div class="m-1 artist" " id= "artist">
         <img src="${data.data[1].artist.picture_medium}" class="w-100 rounded-circle" \>
@@ -134,6 +149,14 @@ if (id) {
       <p class="m-0"> ${dato.type}</p> </div>
       `;
           contenitoreRicerca.appendChild(canzoniConFoto);
+        });
+        let cardAlbum = document.querySelectorAll(".pluto");
+        console.log(cardAlbum);
+        cardAlbum.forEach((e, n) => {
+          e.addEventListener("click", function () {
+            console.log("e");
+            window.location.assign(`album.html?id=${data.data[n].album.id}`);
+          });
         });
         console.log(arrayAlbum);
       } catch (a) {
