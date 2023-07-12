@@ -12,16 +12,14 @@
     width: 100%;
     border-top: 1px solid darken($backgoundGreyBody, 2%);
     //   #navBarDx {
-    font-size: 0.6em;
-    color: $textLightGray;
+    font-size: 0.8em;
+    // color: $textLightGray;
     color: $textSoftGray;
     margin: 0;
     i {
       font-size: 1.8em;
     }
-    ul a:nth-child(3) {
-      font-size: 2em;
-    }
+
     .artistName {
       color: white;
       font-size: 1.2em;
@@ -33,12 +31,18 @@
       box-sizing: border-box;
     }
   }
+  #options a {
+    color: $textSoftGray;
+  }
 
   .player {
     width: 80%;
     max-width: 275px;
     margin: 2rem auto;
     position: relative;
+    ul a:nth-child(3) {
+      font-size: 1.5em;
+    }
   }
 
   .header {
