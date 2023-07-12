@@ -1,12 +1,11 @@
 const addressUrl = new URLSearchParams(location.search);
 const id = addressUrl.get("id");
-const url = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id;
+const url1 = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id;
 
 const artist = async function () {
   try {
-    let response = await fetch(url);
+    let response = await fetch(url1);
     let artist = await response.json();
-    console.log(artist);
     let artistName = document.getElementById("artist");
     artistName.innerHTML = `        
 <div class="cartArtistMain card text-bg-dark" style="height: 400px">
@@ -29,8 +28,6 @@ const artist = async function () {
       `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist.name}`
     );
     let album = await response2.json();
-    console.log(album);
-
     let braniArtistaPopolari = document.getElementById("braniArtistaPopolari");
     console.log(braniArtistaPopolari);
     for (let i = 0; i < 3; i++) {
@@ -53,12 +50,8 @@ const artist = async function () {
           arr2.push(e);
         }
       });
-      console.log(arr1);
-      console.log(arr2);
       let string1 = arr1.join("");
       let string2 = arr2.join("");
-      console.log(div);
-
       let duration = album.data[i].duration / 60;
       let minute = Math.floor(duration);
       let second = album.data[i].duration - minute * 60;

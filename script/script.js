@@ -1,5 +1,3 @@
-//popoliamo le polaylist con canzoni randomiche
-
 //generiamo numeri random da 0 a 24 con lettera assegnata
 let lettere = [
   "a",
@@ -77,6 +75,7 @@ const popolaPlaylist = async function () {
 };
 popolaPlaylist();
 const search = document.getElementById("searchNavBarSx");
+console.log(search);
 search.addEventListener("click", function () {
   window.location.assign("search_static.html");
 });
