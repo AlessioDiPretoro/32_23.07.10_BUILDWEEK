@@ -33,12 +33,12 @@ form.addEventListener("submit", function (e) {
         <div class="m-1 border rounded-2 artist" id= "artist">
         <img src="${data.data[0].artist.picture_medium}" class="w-100" \>
         </div>
-        <div> <h4 class="fontSearch  > ${data.data[0].artist.name} </h4>
+        <div> <h4 class="fontSearch"  > ${data.data[0].artist.name} </h4>
         <p class="m-0"> ${data.data[0].artist.type}</p> </div>
         `;
         contenitoreRicerca.appendChild(artistaConFoto);
         let artist = document.getElementById("artist");
-        artistName.classList.add("artist");
+
         artist.addEventListener("click", function () {
           window.location.assign(`artist.html?id=${data.data[0].artist.id}`);
         });
@@ -52,7 +52,7 @@ form.addEventListener("submit", function (e) {
         <div class="m-1 artist" " id= "artist">
         <img src="${data.data[1].artist.picture_medium}" class="w-100 rounded-circle" \>
         </div>
-        <div class="m-2"> <h4 class="fontSearch "> ${data.data[1].artist.name} </h4>
+        <div class="m-2"> <h4 class="fontSearch"> ${data.data[1].artist.name} </h4>
         <p class="m-0"> ${data.data[1].artist.type}</p> </div>
         `;
         contenitoreRicerca.appendChild(artistaConFoto);
