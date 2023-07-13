@@ -3,7 +3,6 @@ const form = document.getElementById("search");
 let div = document.getElementById("contenitoreRicercaAlbum");
 const addressUrl = new URLSearchParams(location.search);
 const id = addressUrl.get("id");
-let albummone = [];
 
 if (id) {
   form.classList.add("d-none");
@@ -14,6 +13,7 @@ if (id) {
       let data = await response.json();
       console.log(data);
       // console.log(data.data[0]);
+      let albummone = [];
 
       //creo array vuoto da popolare con album
       let arrayAlbum = [];
@@ -21,9 +21,8 @@ if (id) {
 
       // ora collegiamo foto artista a pagina artista
       data.data.forEach((dato) => {
-        albummone.push(dato.album.id);
-        console.log(albummone);
         if (!arrayAlbum.includes(dato.album.title)) {
+          albummone.push(dato.album.id);
           let titolo = dato.album.title;
 
           arrayAlbum.push(titolo);
@@ -72,6 +71,7 @@ if (id) {
         let data = await response.json();
         console.log(data);
         // console.log(data.data[0]);
+        let albummone = [];
 
         //creo array vuoto da popolare con album
         let arrayAlbum = [];
@@ -114,7 +114,7 @@ if (id) {
         data.data.forEach((dato) => {
           if (!arrayAlbum.includes(dato.album.title)) {
             albummone.push(dato.album.id);
-            console.log(albummone);
+
             let titolo = dato.album.title;
             arrayAlbum.push(titolo);
             //creiamo i contenitori per gli album
@@ -148,7 +148,7 @@ if (id) {
         });
         console.log(arrayAlbum);
         let cardAlbum = document.querySelectorAll(".pluto");
-        console.log(albummone);
+
         cardAlbum.forEach((e, n) => {
           console.log(e);
           e.addEventListener("click", function () {
