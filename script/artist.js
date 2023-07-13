@@ -9,11 +9,11 @@ const artist = async function () {
     let artistName = document.getElementById("artist");
 
     artistName.innerHTML = `        
-<div class="cartArtistMain card text-bg-dark" style="height: 400px">
+<div class="cartArtistMain card text-bg-dark" style=" max-height=500px">
 <img
   src="${artist.picture_big}"
   class="card-img"
-  style="height: 400px"
+  style="height: 500px"
   alt="${artist.name} foto"
 />
 <div class="card-img-overlay" style="top: auto">
