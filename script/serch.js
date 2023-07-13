@@ -46,7 +46,7 @@ if (id) {
       cardAlbum.forEach((e, n) => {
         e.addEventListener("click", function () {
           console.log("e");
-          window.location.assign(`album.html?id=${data.data[n].album.id}`);
+          window.location.assign(`album.html?id=${data.data[n + 1].album.id}`);
         });
       });
     } catch (a) {
