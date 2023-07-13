@@ -51,6 +51,7 @@ const artist = async function () {
 `;
 
     const scatolaTracce = document.getElementById("songsData");
+    console.log(artist);
     // console.log(artist.tracks);
     artist.tracks.data.forEach((e, n) => {
       let durationSong = e.duration / 60;
@@ -90,7 +91,7 @@ const artist = async function () {
       </div>
       `;
       scatolaTracce.appendChild(boxino);
-      scatolaTracce.appendChild(boxino);
+
       selectedTrack = scatolaTracce.getElementsByClassName("selectedTrack")[n];
       selectedTrack.addEventListener("click", () => {
         // audioController(artist.tracks.data[n].preview);
