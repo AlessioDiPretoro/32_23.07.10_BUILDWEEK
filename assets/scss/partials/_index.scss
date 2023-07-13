@@ -37,3 +37,14 @@ h2 {
 .card-body p:nth-last-of-type(1) {
   color: $textSoftGray;
 }
+
+
+
+//prova
+#card1Container > div{
+  transition: all 500ms;
+}
+#card1Container > div:hover{
+  z-index: 6;
+    box-shadow: 14px 13px 3px 0px #474545;
+}
