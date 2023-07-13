@@ -30,13 +30,13 @@ const artist = async function () {
       second = `0${second}`;
     }
     artistName.innerHTML = `
-    <div id="immagineAlbum" style="height:200px">
+    <div id="immagineAlbum"">
     <img
       src="
       ${artist.cover_medium}"
       alt="cover-album"
       class="m-4 shadow-lg cardsAlbum"
-      style="width: 200px; height:200px"
+      style="width: 200px;"
       
       id="albumIMg"
     />
@@ -53,61 +53,8 @@ const artist = async function () {
 `;
 
     const scatolaTracce = document.getElementById("songsData");
-    console.log(artist);
-    // console.log(artist.tracks);
-    artist.tracks.data.forEach((e, n) => {
-      let durationSong = e.duration / 60;
-      let minuteSong = Math.floor(durationSong);
-      let secondSong = e.duration - minuteSong * 60;
 
-      if (secondSong < 10) {
-        secondSong = `0${secondSong}`;
-      }
-      let boxino = document.createElement("div");
-      boxino.classList.add(
-        "cardArtistSongs",
-        "d-flex",
-        "align-items-center",
-        "justify-content-evenly",
-        "my-3",
-        "my-md-4"
-      );
-      boxino.innerHTML = `
-      <div class="col col-1 d-none d-md-block">${n + 1}</div>
-
-      <div
-        class="selectedTrack col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
-      >
-        <div class="">
-          <h2>"${e.title}"</h2>
-        </div>
-        <div class="">
-          <p>${e.rank}</p>
-        </div>
-      </div>
-      <div class="col col-2">
-        <p class="d-none d-md-flex justify-content-end">${minuteSong}:${secondSong}</p>
-        <p class="d-md-none">
-          <i class="fa-solid fa-ellipsis-vertical"></i>
-        </p>
-      </div>
-      `;
-      scatolaTracce.appendChild(boxino);
-
-      selectedTrack = scatolaTracce.getElementsByClassName("selectedTrack")[n];
-      selectedTrack.addEventListener("click", () => {
-        // audioController(artist.tracks.data[n].preview);
-        myAudio.src = artist.tracks.data[n].preview;
-        myAudio.autoplay = true;
-        myAudio.loop = true;
-        audioStarted = true;
-        playButtonPlayer.classList.add("fa-stop");
-        buttonPlay.forEach((e) => {
-          e.classList.add("fa-stop");
-        });
-        console.log(artist.tracks.data[n].preview);
-      });
-    });
+    // console.log("artist", artist);
     const draw = function (img) {
       let canvas = document.createElement("canvas");
       let c = canvas.getContext("2d");
@@ -122,13 +69,9 @@ const artist = async function () {
     const getColors = function (c) {
       let col,
         colors = {};
-
       let pixels, r, g, b, a;
-
       r = g = b = a = 0;
-
       pixels = c.getImageData(0, 0, c.width, c.height);
-
       for (let i = 0, data = pixels.data; i < data.length; i += 4) {
         r = data[i];
         g = data[i + 1];
@@ -169,27 +112,34 @@ const artist = async function () {
       return ("000000" + hex).slice(-6);
     };
 
+    //da chiedere a stefano
     const start = function () {
       // prendo il riferimento all'immagine del dom
-      let imgReference = document.querySelector(".cardsAlbum");
-      console.log(imgReference);
+      let imgReference = document.querySelectorAll(".cardsAlbum");
+      console.log("imgReference", imgReference);
 
-      // creo il context 2d dell'immagine selezionata
-      let context = draw(imgReference);
-      console.log(context);
-      // creo la mappa dei colori più ricorrenti nell'immagine
-      let allColors = getColors(context);
-      console.log(allColors);
-      // trovo colore più ricorrente in esadecimale
-      let mostRecurrent = findMostRecurrentColor(allColors);
+      imgReference.forEach((immagine) => {
+        console.log("immagine", immagine);
+        immagine.crossOrigin = "Anonymous";
+        // creo il context 2d dell'immagine selezionata
+        let context = draw(immagine);
+        console.log(context);
+        // creo la mappa dei colori più ricorrenti nell'immagine
+        let allColors = getColors(context);
 
-      // se necessario, aggiunge degli '0' per rendere il risultato un valido colore esadecimale
-      let mostRecurrentHex = pad(mostRecurrent);
-      console.log(mostRecurrent);
-      // console.log del risultato
-      console.log(mostRecurrentHex);
+        // trovo colore più ricorrente in esadecimale
+        let mostRecurrent = findMostRecurrentColor(allColors);
+
+        // se necessario, aggiunge degli '0' per rendere il risultato un valido colore esadecimale
+        let mostRecurrentHex = pad(mostRecurrent);
+
+        // console.log del risultato
+        console.log(mostRecurrentHex);
+        immagine.parentElement.parentElement.style.backgroundColor = "#" + mostRecurrentHex + "99";
+      });
     };
     start();
+
     // crea un canvas con l'immagine e ne ritorno il context 2d
   } catch (err) {
     console.log(err);
