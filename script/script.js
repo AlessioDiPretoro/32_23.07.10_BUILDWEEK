@@ -58,10 +58,15 @@ url = url + parolaFinale;
 // recupero da url dinamico
 let carousellItems = [];
 let cardItems = [];
+let cardYouLikeItems = [];
 const maxCarousellItems = 5;
 const maxCard = 6;
+const maxCardYouLike = 5;
 const carousellContainer = document.querySelector(".carousel-inner");
 const cardContainer = document.querySelector("#card1Container");
+const cardYouLikeContainer = document.querySelector("#card2Container");
+
+// sync data
 const dataSync = async function () {
   let response;
   let data;
@@ -188,7 +193,7 @@ const populateCards = async function (data) {
       // console.log("questo E", );
       const cardItem = document.createElement("div");
       cardItem.innerHTML = `
-      <div class="col playlist cardAnimation">
+      <div class="col playlist cardAnimation align-items-stretch">
       <div
         class="row align-items-center rounded-2 p-0 m-0"
         style="background-color: #2d2d2d"
@@ -220,6 +225,56 @@ const populateCards = async function (data) {
   }
 };
 populateCards();
+
+//creaiamo il ti piace Card
+
+const populateCardsYouLike = async function (data) {
+  for (let i = 0; i < maxCardYouLike; i++) {
+    let thisReading = await dataSync(data);
+
+    console.log("thisReading", thisReading);
+    if (thisReading.hasOwnProperty("error")) {
+      if (thisReading.error.code === 800) {
+        i--;
+        console.log("Errore 800");
+      } else {
+        cardYouLikeItems.push(thisReading);
+      }
+    } else {
+      cardYouLikeItems.push(thisReading);
+    }
+    console.log("cardItems", cardYouLikeItems);
+    cardYouLikeContainer.innerHTML = "";
+    cardYouLikeItems.forEach((e, i) => {
+      // console.log("questo E", );
+      const cardItem = document.createElement("div");
+      cardItem.innerHTML = `
+      <div class="col">
+      <div class="card p-2 align-items-stretch">
+        <img
+          src="${e.artist.picture_small}"
+          width="100%"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body p-0 pt-3 text-white">
+          <p class="card-title">${e.title}</p>
+          <p class="card-text">${e.type}</p>
+        </div>
+      </div>
+    </div>`;
+      cardYouLikeContainer.appendChild(cardItem);
+
+      // aggiungo event listner al pulsante play
+      // cardItem.addEventListener("click", function () {
+      //   window.location.assign(`album.html?id=${e.id}`);
+      // });
+
+      console.log("Appeso NEW");
+    });
+  }
+};
+populateCardsYouLike();
 
 //qui facciamo fetch di quello che è stato generato
 
