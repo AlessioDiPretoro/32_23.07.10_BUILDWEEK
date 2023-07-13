@@ -9,6 +9,7 @@ const id = addressUrl.get("id");
 const url1 = "https://striveschool-api.herokuapp.com/api/deezer/album/" + id;
 // console.log("e");
 let response;
+let selectedTrack = "";
 
 const artist = async function () {
   try {
@@ -69,7 +70,7 @@ const artist = async function () {
       div.innerHTML = `  <div class="col col-1 d-none d-md-block">${n + 1}</div>
 
        <div
-         class="col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
+         class="selectedTrack col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
       >
          <div class="">
           <h2 class="m-0">${e.title}</h2>
@@ -87,6 +88,17 @@ const artist = async function () {
      </div>
   `;
       divCard.appendChild(div);
+      selectedTrack = divCard.getElementsByClassName("selectedTrack")[n];
+      selectedTrack.addEventListener("click", () => {
+        myAudio.src = e.preview;
+        myAudio.autoplay = true;
+        myAudio.loop = true;
+        audioStarted = true;
+        playButtonPlayer.classList.add("fa-stop");
+        buttonPlay.forEach((e) => {
+          e.classList.add("fa-stop");
+        });
+      });
     });
 
     // console.log("artist", artist);
@@ -170,8 +182,7 @@ const artist = async function () {
 
         // console.log del risultato
         console.log(mostRecurrentHex);
-        immagine.parentElement.parentElement.style.backgroundColor =
-          "#" + mostRecurrentHex + "99";
+        immagine.parentElement.parentElement.style.backgroundColor = "#" + mostRecurrentHex + "99";
       });
     };
     // start();
