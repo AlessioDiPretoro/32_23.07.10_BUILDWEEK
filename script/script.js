@@ -57,17 +57,20 @@ url = url + parolaFinale;
 // 50 album casuali: https://striveschool-api.herokuapp.com/api/deezer/artist/412/top?limit=50
 // recupero da url dinamico
 let carousellItems = [];
+let cardItems = [];
 const maxCarousellItems = 5;
+const maxCard = 6;
 const carousellContainer = document.querySelector(".carousel-inner");
+const cardContainer = document.querySelector("#card1Container");
 const dataSync = async function () {
   let response;
   let data;
   try {
     let rnd = Math.floor(Math.random() * 999999);
-    console.log("rnd", rnd);
+    // console.log("rnd", rnd);
     response = await fetch(urlMain + urlAlbum + rnd);
     data = await response.json();
-    console.log("dinamico", data);
+    // console.log("dinamico", data);
 
     return data;
     // ;
@@ -82,18 +85,18 @@ const populateCarousel = async function (data) {
   for (let i = 0; i < maxCarousellItems; i++) {
     let thisReading = await dataSync(data);
 
-    console.log("thisReading", thisReading);
+    // console.log("thisReading", thisReading);
     if (thisReading.hasOwnProperty("error")) {
       if (thisReading.error.code === 800) {
         i--;
-        console.log("Errore 800");
+        // console.log("Errore 800");
       } else {
         carousellItems.push(thisReading);
       }
     } else {
       carousellItems.push(thisReading);
     }
-    console.log("carousellItems", carousellItems);
+    // console.log("carousellItems", carousellItems);
     carousellContainer.innerHTML = "";
     carousellItems.forEach((e, i) => {
       const carousellItem = document.createElement("div");
@@ -151,16 +154,72 @@ const populateCarousel = async function (data) {
       const cardButtonPlay = carousellItem.querySelector(".cardButtonPlay");
       cardButtonPlay.addEventListener("click", function () {
         window.location.assign(`album.html?id=${e.id}`);
-        console.log("url ID:", e.id, carousellItem.classList.contains("active"));
+        // console.log("url ID:", e.id, carousellItem.classList.contains("active"));
       });
 
       const cardButtonSave = document.getElementById("cardButtonSave");
       const cardButtonOptions = document.getElementById("cardButtonOptions");
-      console.log("Appeso");
+      // console.log("Appeso");
     });
   }
 };
 populateCarousel();
+
+//creaiamo il maxCard
+
+const populateCards = async function (data) {
+  for (let i = 0; i < maxCard; i++) {
+    let thisReading = await dataSync(data);
+
+    console.log("thisReading", thisReading);
+    if (thisReading.hasOwnProperty("error")) {
+      if (thisReading.error.code === 800) {
+        i--;
+        console.log("Errore 800");
+      } else {
+        cardItems.push(thisReading);
+      }
+    } else {
+      cardItems.push(thisReading);
+    }
+    console.log("cardItems", cardItems);
+    cardContainer.innerHTML = "";
+    cardItems.forEach((e, i) => {
+      // console.log("questo E", );
+      const cardItem = document.createElement("div");
+      cardItem.innerHTML = `
+      <div class="col playlist cardAnimation">
+      <div
+        class="row align-items-center rounded-2 p-0 m-0"
+        style="background-color: #2d2d2d"
+        role="button"
+      >
+        <div class="col col-4 p-0">
+          <img
+            src="${e.artist.picture_small}"
+            class="rounded-start-2"
+            alt="AlbumPhoto"
+            width="100%"
+          />
+        </div>
+        <div class="col col-8">
+          <p class="m-0">${e.title}</p>
+        </div>
+      </div>
+    </div>
+      `;
+      cardContainer.appendChild(cardItem);
+
+      // aggiungo event listner al pulsante play
+      cardItem.addEventListener("click", function () {
+        window.location.assign(`album.html?id=${e.id}`);
+      });
+
+      console.log("Appeso NEW");
+    });
+  }
+};
+populateCards();
 
 //qui facciamo fetch di quello che è stato generato
 
