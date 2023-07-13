@@ -122,12 +122,20 @@ const audioController = (passedtrack) => {
     myAudio.autoplay = true;
     myAudio.loop = true;
     audioStarted = !audioStarted;
+    playButtonPlayer.classList.toggle("fa-stop");
+    buttonPlay.forEach((e) => {
+      e.classList.toggle("fa-stop");
+    });
   } else {
     myAudio.pause();
     audioStarted = !audioStarted;
+    buttonPlay.forEach((e) => {
+      e.classList.toggle("fa-stop");
+    });
+    playButtonPlayer.classList.toggle("fa-stop");
   }
 };
 
-playButtonPlayer.addEventListener("click", () => {
+playButtonPlayer.addEventListener("click", (e) => {
   audioController(activeTrack);
 });
