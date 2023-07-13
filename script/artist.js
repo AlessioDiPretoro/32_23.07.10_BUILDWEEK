@@ -2,6 +2,8 @@ const addressUrl = new URLSearchParams(location.search);
 const id = addressUrl.get("id");
 const url1 = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id;
 
+let album;
+
 const artist = async function () {
   try {
     let response = await fetch(url1);
@@ -28,7 +30,7 @@ const artist = async function () {
     let response2 = await fetch(
       `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist.name}`
     );
-    let album = await response2.json();
+    album = await response2.json();
     let braniArtistaPopolari = document.getElementById("braniArtistaPopolari");
     console.log(braniArtistaPopolari);
     for (let i = 0; i < 3; i++) {
@@ -91,3 +93,45 @@ const artist = async function () {
   }
 };
 artist();
+
+let myAudio = new Audio();
+let audioStarted = false;
+let activeTrack = "";
+const playerReference = document.querySelectorAll(".player");
+const playButtonPlayer = document.querySelector(".playerPlayButton");
+
+// pulsante play nella card
+const buttonPlay = document.querySelectorAll(".buttonPlay");
+buttonPlay.forEach((e) => {
+  e.addEventListener("click", () => {
+    //passo la prima track al player
+    audioController(album.data[0].preview);
+    activeTrack = album.data[0].preview;
+  });
+});
+
+// gestione player
+
+const audioController = (passedtrack) => {
+  if (!audioStarted) {
+    myAudio.src = passedtrack;
+    myAudio.autoplay = true;
+    myAudio.loop = true;
+    audioStarted = !audioStarted;
+    playButtonPlayer.classList.toggle("fa-stop");
+    buttonPlay.forEach((e) => {
+      e.classList.toggle("fa-stop");
+    });
+  } else {
+    myAudio.pause();
+    audioStarted = !audioStarted;
+    buttonPlay.forEach((e) => {
+      e.classList.toggle("fa-stop");
+    });
+    playButtonPlayer.classList.toggle("fa-stop");
+  }
+};
+
+playButtonPlayer.addEventListener("click", (e) => {
+  audioController(activeTrack);
+});
