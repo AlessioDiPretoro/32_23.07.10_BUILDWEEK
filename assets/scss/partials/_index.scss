@@ -51,11 +51,11 @@ h2 {
 }
 
 #card2Container {
+  .card {
+    transition: all 100ms;
+  }
 
-.card {
-  transition: all 100ms;
-}
-
-.card:hover {
-  transform: scale(1.1);
+  .card:hover {
+    transform: scale(1.1);
+  }
 }
