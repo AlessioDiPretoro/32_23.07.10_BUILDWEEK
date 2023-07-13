@@ -48,10 +48,13 @@ h2 {
   transform: scale(1.1);
 }
 
-.card {
-  transition: all 100ms;
-}
+#card2Container {
 
-.card:hover {
-  transform: scale(1.1);
+  .card {
+    transition: all 100ms;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
 }
