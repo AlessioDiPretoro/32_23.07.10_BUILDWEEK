@@ -1,24 +1,26 @@
-console.log("eila");
+// console.log("eila");
 var length = 3;
 var myString = "ABCDEFG";
 var myTruncatedString = myString.substring(0, length);
-console.log(myTruncatedString);
+// console.log(myTruncatedString);
 
 const addressUrl = new URLSearchParams(location.search);
 const id = addressUrl.get("id");
 const url1 = "https://striveschool-api.herokuapp.com/api/deezer/album/" + id;
-console.log("e");
+// console.log("e");
+let response;
 
 const artist = async function () {
   try {
-    let response = await fetch(url1);
-    console.log(response);
+    response = await fetch(url1);
+    // console.log(response);
     let artist = await response.json();
+    response = artist;
     let date = artist.release_date;
     date = date.substring(date, 4);
-    console.log(date);
+    // console.log(date);
     let artistName = document.getElementById("albumDaCompilare");
-    console.log(artist);
+    // console.log(artist);
 
     let duration = artist.duration / 60;
     let minute = Math.floor(duration);
@@ -49,7 +51,7 @@ const artist = async function () {
 `;
 
     const scatolaTracce = document.getElementById("songsData");
-    console.log(artist.tracks);
+    // console.log(artist.tracks);
     artist.tracks.data.forEach((e, n) => {
       let durationSong = e.duration / 60;
       let minuteSong = Math.floor(durationSong);
@@ -94,3 +96,38 @@ const artist = async function () {
   }
 };
 artist();
+
+let myAudio = new Audio();
+let audioStarted = false;
+let activeTrack = "";
+const playerReference = document.querySelectorAll(".player");
+const playButtonPlayer = document.querySelector(".playerPlayButton");
+
+// pulsante play nella card
+const buttonPlay = document.querySelectorAll(".buttonPlay");
+buttonPlay.forEach((e) => {
+  e.addEventListener("click", () => {
+    //passo la prima track al player
+    audioController(response.tracks.data[0].preview);
+    activeTrack = response.tracks.data[0].preview;
+    console.log("click Play", response.tracks.data[0].preview);
+  });
+});
+
+// gestione player
+
+const audioController = (passedtrack) => {
+  if (!audioStarted) {
+    myAudio.src = passedtrack;
+    myAudio.autoplay = true;
+    myAudio.loop = true;
+    audioStarted = !audioStarted;
+  } else {
+    myAudio.pause();
+    audioStarted = !audioStarted;
+  }
+};
+
+playButtonPlayer.addEventListener("click", () => {
+  audioController(activeTrack);
+});
