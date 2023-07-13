@@ -9,11 +9,11 @@ const artist = async function () {
     let artistName = document.getElementById("artist");
 
     artistName.innerHTML = `        
-<div class="cartArtistMain card text-bg-dark" style="height: 400px">
+<div class="cartArtistMain card text-bg-dark" style=" max-height=500px">
 <img
   src="${artist.picture_big}"
   class="card-img"
-  style="height: 400px"
+  style="height: 500px"
   alt="${artist.name} foto"
 />
 <div class="card-img-overlay" style="top: auto">
@@ -74,12 +74,11 @@ const artist = async function () {
             <h2>${album.data[i].title}</h2>
           </div>
           <div class="">
-            <p> ${string1}<span>.</span>${string2} ascolti</p>
+            <p> ${string1}<span>.</span>${string2}</p>
           </div>
-          <div></div>
         </div>
         <div class="col col-2">
-          <p class="d-none d-md-flex">${minute}:${second} durata</p>
+          <p class="d-none d-md-flex justify-content-end">${minute}:${second}</p>
           <p class="d-md-none">
             <i class="fa-solid fa-ellipsis-vertical"></i>
           </p>

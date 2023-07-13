@@ -38,20 +38,24 @@ h2 {
   color: $textSoftGray;
 }
 
-
+#carouselContainer {
+  height: 230px;
+}
 
 //prova
-#card1Container > div{
+#card1Container > div {
   transition: all 100ms;
 }
-#card1Container > div:hover{
+#card1Container > div:hover {
   transform: scale(1.1);
 }
 
-.card {
-  transition: all 100ms;
-}
+#card2Container {
+  .card {
+    transition: all 100ms;
+  }
 
-.card:hover {
-  transform: scale(1.1);
+  .card:hover {
+    transform: scale(1.1);
+  }
 }
