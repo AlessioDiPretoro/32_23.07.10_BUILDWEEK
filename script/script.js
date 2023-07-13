@@ -58,7 +58,7 @@ url = url + parolaFinale;
 // recupero da url dinamico
 let carousellItems = [];
 const maxCarousellItems = 5;
-const carousellContainer = document.getElementById("carouselExample");
+const carousellContainer = document.querySelector(".carousel-inner");
 const dataSync = async function () {
   let response;
   let data;
@@ -126,7 +126,7 @@ const populateCarousel = async function (data) {
           </div>
         </div>
         <div class="d-flex">
-          <div id="cardButtonPlay">
+          <div class="cardButtonPlay">
             <button type="button" class="btn btn-success rounded-4 text-black m-1">
               Play
             </button>
@@ -144,11 +144,18 @@ const populateCarousel = async function (data) {
     </div>
   </div>
     `;
+
+      carousellContainer.appendChild(carousellItem);
+
       // aggiungo event listner al pulsante play
-      const cardButtonPlay = document.getElementById("cardButtonPlay");
+      const cardButtonPlay = carousellItem.querySelector(".cardButtonPlay");
+      cardButtonPlay.addEventListener("click", function () {
+        window.location.assign(`album.html?id=${e.id}`);
+        console.log("url ID:", e.id, carousellItem.classList.contains("active"));
+      });
+
       const cardButtonSave = document.getElementById("cardButtonSave");
       const cardButtonOptions = document.getElementById("cardButtonOptions");
-      carousellContainer.appendChild(carousellItem);
       console.log("Appeso");
     });
   }
