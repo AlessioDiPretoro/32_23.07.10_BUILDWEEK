@@ -126,17 +126,17 @@ const populateCarousel = async function (data) {
           </div>
         </div>
         <div class="d-flex">
-          <div>
+          <div id="cardButtonPlay">
             <button type="button" class="btn btn-success rounded-4 text-black m-1">
               Play
             </button>
           </div>
-          <div>
+          <div id="cardButtonSave>
             <button type="button" class="btn btn-dark rounded-4 border m-1">
               Salva
             </button>
           </div>
-          <div>
+          <div id="cardButtonOptions">
             <button type="button" class="btn btn-dark rounded-4 m-1">...</button>
           </div>
         </div>
@@ -144,6 +144,10 @@ const populateCarousel = async function (data) {
     </div>
   </div>
     `;
+      // aggiungo event listner al pulsante play
+      const cardButtonPlay = document.getElementById("cardButtonPlay");
+      const cardButtonSave = document.getElementById("cardButtonSave");
+      const cardButtonOptions = document.getElementById("cardButtonOptions");
       carousellContainer.appendChild(carousellItem);
       console.log("Appeso");
     });
