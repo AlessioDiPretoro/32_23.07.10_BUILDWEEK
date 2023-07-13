@@ -1,30 +1,32 @@
 #navBarSx {
   font-size: 0.8em;
   color: $textSoftGray;
-}
-
-#navBarSx ul {
-  padding: 0;
-}
-
-#navBarSx li {
-  list-style-type: none;
+  a,
+  li {
+    padding: 0.2em 0;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+  ul {
+    padding: 0;
+  }
 }
 
 #navBarMiddleMobile {
-  position: sticky;
-  top: 90%;
+  // position: sticky;
+  bottom: 1%;
   z-index: 1;
   background-color: #121212c4 !important;
   margin-top: -50px;
   justify-content: center !important;
-}
-
-#navBarMiddleMobile a {
-  margin: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  a {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (min-width: 768px) {

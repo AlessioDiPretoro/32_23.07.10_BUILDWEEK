@@ -1,25 +1,26 @@
-.cardNavbarDx {
-  // font-size: 0.55em;
-  padding: 1em 0;
-  //   font-family: "CircularStd-Medium";
-}
-
 #navBarDx {
-  font-size: 0.6em;
+  font-size: 1em;
   color: $textLightGray;
   margin: 2em 0;
   color: $textSoftGray;
   padding-left: 10px !important;
-}
-
-#navBarDx ul {
-  padding: 0;
-}
-
-#navBarDx li {
-  list-style-type: none;
-}
-
-.cardNavbarDx #artistName {
-  font-size: 1.2em;
+  .cardNavbarDx {
+    font-size: 0.7em;
+    padding: 1em 0;
+  }
+  .cardNavbarDx #artistName {
+    font-size: 1.2em;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  .cardNavbarDx {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
 }

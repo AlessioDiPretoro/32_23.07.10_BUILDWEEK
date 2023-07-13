@@ -10,6 +10,10 @@
 #playerContainer {
   background: $backgoundGreyBody;
   width: 100%;
+  @media screen and (min-width: 767px) {
+    bottom: 0;
+  }
+  bottom: 9%;
   border-top: 1px solid darken($backgoundGreyBody, 2%);
   //   #navBarDx {
   font-size: 0.8em;
