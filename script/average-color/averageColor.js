@@ -61,9 +61,10 @@ const start = function () {
   let imgReference = document.querySelectorAll(".cardSearch");
 
   imgReference.forEach((immagine) => {
+    console.log(immagine);
     // creo il context 2d dell'immagine selezionata
     let context = draw(immagine);
-
+    console.log(context);
     // creo la mappa dei colori più ricorrenti nell'immagine
     let allColors = getColors(context);
 
@@ -75,7 +76,8 @@ const start = function () {
 
     // console.log del risultato
     console.log(mostRecurrentHex);
-    immagine.parentElement.style.backgroundColor = "#" + mostRecurrentHex + "99";
+    immagine.parentElement.style.backgroundColor =
+      "#" + mostRecurrentHex + "99";
   });
 };
 
