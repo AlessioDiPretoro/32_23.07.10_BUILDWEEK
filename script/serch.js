@@ -3,6 +3,8 @@ const form = document.getElementById("search");
 let div = document.getElementById("contenitoreRicercaAlbum");
 const addressUrl = new URLSearchParams(location.search);
 const id = addressUrl.get("id");
+let albummone = [];
+
 if (id) {
   form.classList.add("d-none");
   const serch1 = async function () {
@@ -19,10 +21,13 @@ if (id) {
 
       // ora collegiamo foto artista a pagina artista
       data.data.forEach((dato) => {
+        albummone.push(dato.album.id);
+        console.log(albummone);
         if (!arrayAlbum.includes(dato.album.title)) {
           let titolo = dato.album.title;
 
           arrayAlbum.push(titolo);
+
           //creiamo i contenitori per gli album
           const albumConFoto = document.createElement("div");
           albumConFoto.classList.add(
@@ -42,11 +47,9 @@ if (id) {
         }
       });
       let cardAlbum = document.querySelectorAll(".pluto");
-      console.log(cardAlbum);
       cardAlbum.forEach((e, n) => {
         e.addEventListener("click", function () {
-          console.log("e");
-          window.location.assign(`album.html?id=${data.data[n].album.id}`);
+          window.location.assign(`album.html?id=${albummone[n]}`);
         });
       });
     } catch (a) {
@@ -63,12 +66,9 @@ if (id) {
 
     let input = document.querySelector("input").value;
 
-    console.log(input);
-    console.log("ok");
     const serch = async function () {
       try {
         let response = await fetch(url + input);
-        console.log(response);
         let data = await response.json();
         console.log(data);
         // console.log(data.data[0]);
@@ -76,13 +76,9 @@ if (id) {
         //creo array vuoto da popolare con album
         let arrayAlbum = [];
         //ciclo array data, pesco gli album e lizeppo dentro l'array
-        console.log(data.data[1].artist.name.toLowerCase());
-        console.log(input.toLowerCase());
         if (data.data[0].artist.name.toLowerCase() === input.toLowerCase()) {
           const artistaConFoto = document.createElement("div");
           artistaConFoto.classList.add("d-flex", "align-items-center");
-          console.log(artistaConFoto);
-          console.log("m");
           artistaConFoto.innerHTML = `
         <div class="m-1 artist" id= "artist">
         <img src="${data.data[0].artist.picture_medium}" class="w-100 rounded-circle " \>
@@ -100,7 +96,6 @@ if (id) {
           data.data[1].artist.name.toLowerCase() === input.toLowerCase()
         ) {
           const artistaConFoto = document.createElement("div");
-          console.log("m");
           artistaConFoto.classList.add("d-flex", "align-items-center", "mt-3");
           artistaConFoto.innerHTML = `
         <div class="m-1 artist" " id= "artist">
@@ -118,12 +113,18 @@ if (id) {
         // ora collegiamo foto artista a pagina artista
         data.data.forEach((dato) => {
           if (!arrayAlbum.includes(dato.album.title)) {
+            albummone.push(dato.album.id);
+            console.log(albummone);
             let titolo = dato.album.title;
-            console.log(titolo);
             arrayAlbum.push(titolo);
             //creiamo i contenitori per gli album
             const albumConFoto = document.createElement("div");
-            albumConFoto.classList.add("d-flex", "align-items-center", "mt-3");
+            albumConFoto.classList.add(
+              "d-flex",
+              "align-items-center",
+              "mt-3",
+              "pluto"
+            );
             albumConFoto.innerHTML = `
         <div class="m-1">
         <img class="artist" src="${dato.album.cover_small}" \>
@@ -146,6 +147,14 @@ if (id) {
           contenitoreRicerca.appendChild(canzoniConFoto);
         });
         console.log(arrayAlbum);
+        let cardAlbum = document.querySelectorAll(".pluto");
+        console.log(albummone);
+        cardAlbum.forEach((e, n) => {
+          console.log(e);
+          e.addEventListener("click", function () {
+            window.location.assign(`album.html?id=${albummone[n]}`);
+          });
+        });
       } catch (a) {
         console.log(a);
       }
