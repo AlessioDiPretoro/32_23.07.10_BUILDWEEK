@@ -74,12 +74,11 @@ const artist = async function () {
             <h2>${album.data[i].title}</h2>
           </div>
           <div class="">
-            <p> ${string1}<span>.</span>${string2} ascolti</p>
+            <p> ${string1}<span>.</span>${string2}</p>
           </div>
-          <div></div>
         </div>
         <div class="col col-2">
-          <p class="d-none d-md-flex">${minute}:${second} durata</p>
+          <p class="d-none d-md-flex justify-content-end">${minute}:${second}</p>
           <p class="d-md-none">
             <i class="fa-solid fa-ellipsis-vertical"></i>
           </p>
