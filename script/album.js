@@ -16,6 +16,7 @@ const artist = async function () {
     // console.log(response);
     let artist = await response.json();
     response = artist;
+    console.log(artist);
     let date = artist.release_date;
     date = date.substring(date, 4);
     // console.log(date);
@@ -51,8 +52,6 @@ const artist = async function () {
     </div>
   </div>
 `;
-
-    const scatolaTracce = document.getElementById("songsData");
 
     // console.log("artist", artist);
     const draw = function (img) {
@@ -135,10 +134,11 @@ const artist = async function () {
 
         // console.log del risultato
         console.log(mostRecurrentHex);
-        immagine.parentElement.parentElement.style.backgroundColor = "#" + mostRecurrentHex + "99";
+        immagine.parentElement.parentElement.style.backgroundColor =
+          "#" + mostRecurrentHex + "99";
       });
     };
-    start();
+    // start();
 
     // crea un canvas con l'immagine e ne ritorno il context 2d
   } catch (err) {
