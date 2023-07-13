@@ -1,6 +1,7 @@
 const addressUrl = new URLSearchParams(location.search);
 const id = addressUrl.get("id");
 const url1 = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id;
+let selectedTrack = "";
 
 let album;
 
@@ -70,7 +71,7 @@ const artist = async function () {
         <div class="col col-1">${i + 1}</div>
 
         <div
-          class="col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
+          class="selectedTrack col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
         >
           <div class="">
             <h2>${album.data[i].title}</h2>
@@ -87,6 +88,11 @@ const artist = async function () {
         </div>
       `;
       braniArtistaPopolari.appendChild(div);
+      selectedTrack = braniArtistaPopolari.getElementsByClassName("selectedTrack")[i];
+      selectedTrack.addEventListener("click", () => {
+        audioController(album.data[i].preview);
+        // console.log(album.data[i].preview);
+      });
     }
   } catch (err) {
     console.log(err);

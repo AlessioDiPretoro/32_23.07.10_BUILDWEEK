@@ -73,7 +73,7 @@ const artist = async function () {
       <div class="col col-1 d-none d-md-block">${n + 1}</div>
 
       <div
-        class="col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
+        class="selectedTrack col col-8 d-flex flex-column justify-content-between align-items-md-center flex-md-row ps-2"
       >
         <div class="">
           <h2>"${e.title}"</h2>
@@ -90,6 +90,20 @@ const artist = async function () {
       </div>
       `;
       scatolaTracce.appendChild(boxino);
+      scatolaTracce.appendChild(boxino);
+      selectedTrack = scatolaTracce.getElementsByClassName("selectedTrack")[n];
+      selectedTrack.addEventListener("click", () => {
+        // audioController(artist.tracks.data[n].preview);
+        myAudio.src = artist.tracks.data[n].preview;
+        myAudio.autoplay = true;
+        myAudio.loop = true;
+        audioStarted = true;
+        playButtonPlayer.classList.add("fa-stop");
+        buttonPlay.forEach((e) => {
+          e.classList.add("fa-stop");
+        });
+        console.log(artist.tracks.data[n].preview);
+      });
     });
   } catch (err) {
     console.log(err);
