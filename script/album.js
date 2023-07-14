@@ -186,7 +186,7 @@ const artist = async function () {
           "#" + mostRecurrentHex + "99";
       });
     };
-    // start();
+    start();
 
     // crea un canvas con l'immagine e ne ritorno il context 2d
   } catch (err) {
