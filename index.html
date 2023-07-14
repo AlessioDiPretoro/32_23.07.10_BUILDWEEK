@@ -23,12 +23,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="shortcut icon" href="./assets/imgs/icons8-spotify-32.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/icons8-spotify-32.png"
+      type="image/x-icon"
+    />
   </head>
   <body class="container-fluid">
     <div class="row flex-column-reverse flex-md-row m-0">
       <!-- qui dentro andrà la navbar di sinistra -->
-      <div class="col col-12 col-md-2 bg-transparent d-none d-md-flex bg-black" id="navBarSx">
+      <div
+        class="col col-12 col-md-2 bg-transparent d-none d-md-flex bg-black"
+        id="navBarSx"
+      >
         <!--==================================================================-->
         <div class="container-fluid">
           <div class="row">
@@ -145,10 +152,13 @@
       </div>
       <!--fine navbar-->
       <!-- qui dentro andrà il Main -->
-      <div class="col col-12 col-md-8">
+      <div id="colonnaCentrale" class="col col-12 col-md-8">
         <main>
           <!-- nav bar con freccie e profilo -->
-          <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+          <nav
+            class="navbar bg-dark border-bottom border-bottom-dark"
+            data-bs-theme="dark"
+          >
             <div class="container-fluid">
               <div class="position-relative w-50 d-flex">
                 <button
@@ -157,7 +167,10 @@
                   data-bs-target="#carouselExample"
                   data-bs-slide="prev"
                 >
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
                 <button
@@ -166,7 +179,10 @@
                   data-bs-target="#carouselExample"
                   data-bs-slide="next"
                 >
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
@@ -197,7 +213,10 @@
             </div>
           </nav>
           <!-- Primo blocco canzone con carosello-->
-          <div id="carouselContainer" class="container w-100 d-none p-0 d-md-block">
+          <div
+            id="carouselContainer"
+            class="container w-100 d-none p-0 d-md-block"
+          >
             <div id="carouselExample" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active"></div>
@@ -206,7 +225,11 @@
                   <div class="row bg-black p-4">
                     <div class="col col-3">
                       <div class="">
-                        <img src="./assets/imgs/main/image-3.jpg" class="w-100" alt="Album Top" />
+                        <img
+                          src="./assets/imgs/main/image-3.jpg"
+                          class="w-100"
+                          alt="Album Top"
+                        />
                       </div>
                     </div>
                     <div class="col col-9">
@@ -227,17 +250,28 @@
                       </div>
                       <div class="d-flex">
                         <div>
-                          <button type="button" class="btn btn-success rounded-4 text-black m-1">
+                          <button
+                            type="button"
+                            class="btn btn-success rounded-4 text-black m-1"
+                          >
                             Play
                           </button>
                         </div>
                         <div>
-                          <button type="button" class="btn btn-dark rounded-4 border m-1">
+                          <button
+                            type="button"
+                            class="btn btn-dark rounded-4 border m-1"
+                          >
                             Salva
                           </button>
                         </div>
                         <div>
-                          <button type="button" class="btn btn-dark rounded-4 m-1">...</button>
+                          <button
+                            type="button"
+                            class="btn btn-dark rounded-4 m-1"
+                          >
+                            ...
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -250,7 +284,10 @@
                 data-bs-target="#carouselExample"
                 data-bs-slide="prev"
               >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Previous</span>
               </button>
               <button
@@ -259,7 +296,10 @@
                 data-bs-target="#carouselExample"
                 data-bs-slide="next"
               >
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
@@ -272,10 +312,19 @@
                 <h2 class="m-0">Buonasera</h2>
               </div>
               <div class="col">
-                <div class="d-md-none d-flex justify-content-end" id="hiddenMenu">
-                  <a href="#"><i class="fa-regular fa-bell" style="color: #ffffff"></i></a>
-                  <a href="#"><i class="fa-regular fa-clock" style="color: #ffffff"></i></a>
-                  <a href="#"><i class="fa-solid fa-gear" style="color: #ffffff"></i></a>
+                <div
+                  class="d-md-none d-flex justify-content-end"
+                  id="hiddenMenu"
+                >
+                  <a href="#"
+                    ><i class="fa-regular fa-bell" style="color: #ffffff"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa-regular fa-clock" style="color: #ffffff"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa-solid fa-gear" style="color: #ffffff"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -497,7 +546,10 @@
             <!-- singola card -->
             <div class="row row-cols-1 mb-3">
               <div class="col p-0">
-                <div class="card text-white p-3" style="background-color: #2d2d2d">
+                <div
+                  class="card text-white p-3"
+                  style="background-color: #2d2d2d"
+                >
                   <div class="row">
                     <div class="col">
                       <div class="row g-0 flex-nowrap">
@@ -523,10 +575,15 @@
                         <i class="fa-solid fa-heart" style="color: #00ff00"></i>
                       </a>
                       <a href="#" class="">
-                        <i class="fa-solid fa-ellipsis-vertical" style="color: #808080"></i>
+                        <i
+                          class="fa-solid fa-ellipsis-vertical"
+                          style="color: #808080"
+                        ></i>
                       </a>
                     </div>
-                    <div class="col d-flex align-items-center justify-content-end">
+                    <div
+                      class="col d-flex align-items-center justify-content-end"
+                    >
                       <span>16 Brani</span>
                       <a href="#" class="">
                         <i
@@ -542,7 +599,10 @@
             <!-- singola card -->
             <div class="row row-cols-1 mb-3">
               <div class="col p-0">
-                <div class="card text-white p-3" style="background-color: #2d2d2d">
+                <div
+                  class="card text-white p-3"
+                  style="background-color: #2d2d2d"
+                >
                   <div class="row">
                     <div class="col">
                       <div class="row g-0 flex-nowrap">
@@ -568,10 +628,15 @@
                         <i class="fa-solid fa-heart" style="color: #00ff00"></i>
                       </a>
                       <a href="#" class="">
-                        <i class="fa-solid fa-ellipsis-vertical" style="color: #808080"></i>
+                        <i
+                          class="fa-solid fa-ellipsis-vertical"
+                          style="color: #808080"
+                        ></i>
                       </a>
                     </div>
-                    <div class="col d-flex align-items-center justify-content-end">
+                    <div
+                      class="col d-flex align-items-center justify-content-end"
+                    >
                       <span>16 Brani</span>
                       <a href="#" class="">
                         <i
@@ -587,7 +652,10 @@
             <!-- singola card -->
             <div class="row row-cols-1 mb-3">
               <div class="col p-0">
-                <div class="card text-white p-3" style="background-color: #2d2d2d">
+                <div
+                  class="card text-white p-3"
+                  style="background-color: #2d2d2d"
+                >
                   <div class="row">
                     <div class="col">
                       <div class="row g-0 flex-nowrap">
@@ -613,10 +681,15 @@
                         <i class="fa-solid fa-heart" style="color: #00ff00"></i>
                       </a>
                       <a href="#" class="">
-                        <i class="fa-solid fa-ellipsis-vertical" style="color: #808080"></i>
+                        <i
+                          class="fa-solid fa-ellipsis-vertical"
+                          style="color: #808080"
+                        ></i>
                       </a>
                     </div>
-                    <div class="col d-flex align-items-center justify-content-end">
+                    <div
+                      class="col d-flex align-items-center justify-content-end"
+                    >
                       <span>16 Brani</span>
                       <a href="#" class="">
                         <i
@@ -733,7 +806,11 @@
       <!-- qui dentro andrà la navbar di destra -->
       <div class="col col-2 bg-black d-none d-md-block">
         <div class="container w-100 p-0 sticky-top">
-          <nav id="navBarDx" class="navbar navbar-expand-xl bg-black" data-bs-theme="dark">
+          <nav
+            id="navBarDx"
+            class="navbar navbar-expand-xl bg-black"
+            data-bs-theme="dark"
+          >
             <div class="container-fluid p-0">
               <button
                 class="navbar-toggler"
@@ -752,15 +829,23 @@
               >
                 <div class="w-100 d-flex justify-content-between">
                   <div class="nav-item">
-                    <a href="#" class="text-white text-decoration-none">Attività amici</a>
+                    <a href="#" class="text-white text-decoration-none"
+                      >Attività amici</a
+                    >
                   </div>
                   <div class="nav-item">
                     <div>
                       <a href="#"
-                        ><i class="fa-solid fa-user-plus pe-2" style="color: #ffffff"></i
+                        ><i
+                          class="fa-solid fa-user-plus pe-2"
+                          style="color: #ffffff"
+                        ></i
                       ></a>
                       <a href="#"
-                        ><i class="navBarDxClose fa-solid fa-x pe-2" style="color: #ffffff"></i
+                        ><i
+                          class="navBarDxClose fa-solid fa-x pe-2"
+                          style="color: #ffffff"
+                        ></i
                       ></a>
                     </div>
                   </div>
@@ -885,11 +970,16 @@
     </div>
 
     <!-- Player -->
-    <div id="playerContainer" class="row sticky-bottom justify-content-between align-items-center">
+    <div
+      id="playerContainer"
+      class="row sticky-bottom justify-content-between align-items-center"
+    >
       <div class="col col-8 col-md-2">
         <!-- SX card -->
         <div class="col cardPlayer p-2">
-          <div class="row align-items-center p-0 m-0 justify-content-end text-end text-md-start">
+          <div
+            class="row align-items-center p-0 m-0 justify-content-end text-end text-md-start"
+          >
             <div class="col col-0 col-md-2 p-0 me-2 d-none d-md-flex">
               <img
                 src="./assets/imgs/main/image-4.jpg"
@@ -910,7 +1000,9 @@
         </div>
       </div>
       <!-- controller player audio -->
-      <div class="col col-2 col-md-7 d-flex order-last order-md-0 justify-content-center p-2">
+      <div
+        class="col col-2 col-md-7 d-flex order-last order-md-0 justify-content-center p-2"
+      >
         <div class="player">
           <ul class="buttons">
             <a href="#" class="button button-sm d-none d-md-flex">
@@ -922,7 +1014,11 @@
               <span class="sr-only">Previous Music</span>
             </a>
             <a href="#" class="button button-lg">
-              <i class="fas fa-play fa-lg" aria-hidden="true" aria-hidden="true"></i>
+              <i
+                class="fas fa-play fa-lg"
+                aria-hidden="true"
+                aria-hidden="true"
+              ></i>
               <!-- al click cambia classe in fa-pause opp fa-stop -->
               <span class="sr-only">Play</span>
             </a>
@@ -947,7 +1043,10 @@
           </div>
           <!--  progress  -->
         </div>
-        <script src="https://kit.fontawesome.com/7d35781f0a.js" crossorigin="anonymous"></script>
+        <script
+          src="https://kit.fontawesome.com/7d35781f0a.js"
+          crossorigin="anonymous"
+        ></script>
         <link
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
           rel="stylesheet"
@@ -961,7 +1060,9 @@
           <a href="#" class="d-none d-md-flex">
             <i class="fa-solid fa-microphone"></i>
           </a>
-          <a href="#" class="d-none d-md-flex"><i class="fa-solid fa-bars"></i></a>
+          <a href="#" class="d-none d-md-flex"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
           <a href="#"><i class="fa-solid fa-network-wired"></i></a>
           <div class="volumeController d-none d-md-flex">
             <a href="#"><i class="fa-solid fa-volume-low me-2"></i></a>
@@ -973,7 +1074,10 @@
     </div>
     <!-- nav bar solo in Mobile -->
     <!--Inizio navtop Mobile-->
-    <div class="container-fluid d-md-none sticky-bottom" id="navBarMiddleMobile">
+    <div
+      class="container-fluid d-md-none sticky-bottom"
+      id="navBarMiddleMobile"
+    >
       <div class="col d-flex flex-md-column justify-content-center p-0">
         <div class="d-none d-md-block mt-2">
           <svg
