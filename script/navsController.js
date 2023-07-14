@@ -25,3 +25,15 @@ navBarSxClose.addEventListener("click", () => {
   console.log(navBarSxClose.parentElement.nextElementSibling);
   navBarSxClose.parentElement.nextElementSibling.classList.toggle("d-md-none");
 });
+
+const userInfoReference = document.getElementById("userInfo");
+// console.log("userInfoReference", userInfoReference);
+const userInfo = () => {
+  const userInfoImg = userInfoReference.querySelector("img");
+  console.log("userInfoImg", userInfoImg);
+  userInfoImg.src = `${"https://www.chenews.it/wp-content/uploads/2021/11/Gabibbo-4.jpg"}`;
+  userInfoImg.style.height = "30px";
+  const userInfoName = userInfoReference.querySelector("span");
+  userInfoName.innerText = "Gabibbo";
+};
+userInfo();

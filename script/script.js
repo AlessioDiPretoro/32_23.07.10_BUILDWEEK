@@ -215,7 +215,7 @@ const populateCards = async function (data) {
       `;
       cardContainer.appendChild(cardItem);
 
-      // aggiungo event listner al pulsante play
+      // aggiungo event listner alla card
       cardItem.addEventListener("click", function () {
         window.location.assign(`album.html?id=${e.id}`);
       });
@@ -265,10 +265,10 @@ const populateCardsYouLike = async function (data) {
     </div>`;
       cardYouLikeContainer.appendChild(cardItem);
 
-      // aggiungo event listner al pulsante play
-      // cardItem.addEventListener("click", function () {
-      //   window.location.assign(`album.html?id=${e.id}`);
-      // });
+      // aggiungo event listner alla card
+      cardItem.addEventListener("click", function () {
+        window.location.assign(`album.html?id=${e.id}`);
+      });
 
       console.log("Appeso NEW");
     });
@@ -289,9 +289,7 @@ const popolaPlaylist = async function () {
     playlist.forEach((elemento, numero) => {
       //ad ogni eleemnto mettiamo un listenere al click che porta alla pagina con il proprio id
       elemento.addEventListener("click", () => {
-        window.location.assign(
-          `playlist.html?id=${data.data[numero].album.id}`
-        );
+        window.location.assign(`playlist.html?id=${data.data[numero].album.id}`);
       });
     });
   } catch (err) {
