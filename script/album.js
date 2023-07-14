@@ -182,10 +182,11 @@ const artist = async function () {
 
         // console.log del risultato
         console.log(mostRecurrentHex);
-        immagine.parentElement.parentElement.style.backgroundColor = "#" + mostRecurrentHex + "99";
+        immagine.parentElement.parentElement.style.backgroundColor =
+          "#" + mostRecurrentHex + "99";
       });
     };
-    // start();
+    start();
 
     // crea un canvas con l'immagine e ne ritorno il context 2d
   } catch (err) {
