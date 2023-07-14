@@ -105,6 +105,7 @@ let audioStarted = false;
 let activeTrack = "";
 const playerReference = document.querySelectorAll(".player");
 const playButtonPlayer = document.querySelector(".playerPlayButton");
+const progbarToInner = document.querySelector(".prog-bar-TO-inner");
 
 // pulsante play nella card
 const buttonPlay = document.querySelectorAll(".buttonPlay");
@@ -124,6 +125,7 @@ const audioController = (passedtrack) => {
     myAudio.autoplay = true;
     myAudio.loop = true;
     audioStarted = !audioStarted;
+    progbarToInner.classList.toggle("prog-bar-inner");
     playButtonPlayer.classList.toggle("fa-stop");
     buttonPlay.forEach((e) => {
       e.classList.toggle("fa-stop");
@@ -131,6 +133,7 @@ const audioController = (passedtrack) => {
   } else {
     myAudio.pause();
     audioStarted = !audioStarted;
+    progbarToInner.classList.toggle("prog-bar-inner");
     buttonPlay.forEach((e) => {
       e.classList.toggle("fa-stop");
     });
