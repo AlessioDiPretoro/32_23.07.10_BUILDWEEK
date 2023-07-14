@@ -13,7 +13,7 @@ const tracceAlbum = async function () {
   data.tracks.data.forEach((canzone) => {
     let li = document.createElement("li");
     li.innerHTML = `
-     <img src="${canzone.album.cover_small}" />
+     <img src="${canzone.album.cover_medium}" />
      <li>${canzone.title}</li>
      `;
     listona.appendChild(li);

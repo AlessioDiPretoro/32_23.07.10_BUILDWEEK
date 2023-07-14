@@ -201,7 +201,7 @@ const populateCards = async function (data) {
       >
         <div class="col col-4 p-0">
           <img
-            src="${e.artist.picture_small}"
+            src="${e.artist.picture_medium}"
             class="rounded-start-2"
             alt="AlbumPhoto"
             width="100%"
@@ -252,7 +252,7 @@ const populateCardsYouLike = async function (data) {
       <div class="col">
       <div class="card p-2 align-items-stretch">
         <img
-          src="${e.artist.picture_small}"
+          src="${e.artist.picture_medium}"
           width="100%"
           class="card-img-top"
           alt="..."
@@ -289,7 +289,9 @@ const popolaPlaylist = async function () {
     playlist.forEach((elemento, numero) => {
       //ad ogni eleemnto mettiamo un listenere al click che porta alla pagina con il proprio id
       elemento.addEventListener("click", () => {
-        window.location.assign(`playlist.html?id=${data.data[numero].album.id}`);
+        window.location.assign(
+          `playlist.html?id=${data.data[numero].album.id}`
+        );
       });
     });
   } catch (err) {
