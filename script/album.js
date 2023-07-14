@@ -182,7 +182,8 @@ const artist = async function () {
 
         // console.log del risultato
         console.log(mostRecurrentHex);
-        immagine.parentElement.parentElement.style.backgroundColor = "#" + mostRecurrentHex + "99";
+        immagine.parentElement.parentElement.style.backgroundColor =
+          "#" + mostRecurrentHex + "99";
       });
     };
     // start();
